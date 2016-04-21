@@ -1,0 +1,174 @@
+{
+  "basics": {
+    "name": "Jonathan Haines",
+    "label": "Web Technology Consultant",
+    "picture": "",
+    "email": "jonno.haines@gmail.com",
+    "phone": "0488008858",
+    "website": "http://barrythepenguin.github.io/",
+    "summary": "Passionate about building up new developers, open source, and improving experiances between humans and technology. Currently exploring web standards, functional programming and composable user interfaces.",
+    "location": {
+      "city": "Sydney",
+      "countryCode": "AU",
+      "region": "New South Wales"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "BarryThePenguin",
+        "url": "https://twitter.com/BarryThePenguin"
+      },
+      {
+        "network": "GitHub",
+        "username": "BarryThePenguin",
+        "url": "https://github.com/BarryThePenguin"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "",
+        "url": "https://au.linkedin.com/in/jonnohaines"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "RXP Services",
+      "position": "Consultant",
+      "website": "https://rxpservices.com.au/",
+      "startDate": "July 2012",
+      "endDate": "Present",
+      "summary": "",
+      "highlights": [
+        "ServiceNSW - MyServiceNSW",
+        "Helloworld Limited",
+        "Lend Lease Retail - Searchable Centre",
+        "Department of Justice - Identity Association Tool",
+        "University of Tasmania - Tasmania Results Administration and Verification System"
+      ]
+    },
+    {
+      "company": "Insight4",
+      "position": "Software Developer",
+      "startDate": "July 2012",
+      "endDate": "June 2014",
+      "summary": "",
+      "highlights": [
+        "RACT - Member Hub",
+        "Department of Primary Industries, Parks, Water and Environment - Electronic Travel Claim System",
+        "Department of Education - Student Support System"
+      ]
+    },
+    {
+      "company": "Insight4",
+      "position": "Juniour Software Developer",
+      "startDate": "November 2011",
+      "endDate": "February 2012",
+      "summary": "",
+      "highlights": [
+        "Department of Health and Human Services - Pediatric Asthma Registry"
+      ]
+    },
+    {
+      "company": "Insight4",
+      "position": "Juniour Software Developer",
+      "startDate": "November 2010",
+      "endDate": "February 2011",
+      "summary": "",
+      "highlights": [
+        "Knight Frank - Property Management System"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Vision 100 IT",
+      "position": "Team member",
+      "website": "http://vision100.org",
+      "startDate": "July 2010",
+      "endDate": "Present",
+      "summary": "Vision 100 IT exists to help churches - particularly church IT volunteers and ministry staff - to use IT better.",
+      "highlights": [
+
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Tasmania",
+      "area": "Engineering, Computer Systems",
+      "studyType": "Bachelor",
+      "startDate": "2008",
+      "endDate": "2014"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "level": "★★★★★",
+      "keywords": [
+        "Web Applications",
+        "JavaScript",
+        ".Net"
+      ]
+    },
+    {
+      "name": "Continually",
+      "level": "★★★★☆",
+      "keywords": [
+        "Learning",
+        "Testing",
+        "Improving"
+      ]
+    },
+    {
+      "name": "People",
+      "level": "★★★☆☆",
+      "keywords": [
+        "Mentoring",
+        "Collaboration",
+        "Enabling others"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Tasty Drinks",
+      "keywords": [
+        "Coffee",
+        "Beer",
+        "Whiskey"
+      ]
+    },
+    {
+      "name": "Open Source Software",
+      "keywords": [
+        "SparkleShare",
+        "angular-formly",
+        "AVA",
+        "eslint"
+      ]
+    },
+    {
+      "name": "Relaxation",
+      "keywords": [
+        "Cycling",
+        "Weekends",
+        "Guitar"
+      ]
+    },
+    {
+      "name": "Thinking",
+      "keywords": [
+        "Theology",
+        "Femenism"
+      ]
+    }
+  ],
+  "references": []
+}

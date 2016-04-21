@@ -1,0 +1,21 @@
+{
+    "name": "barrythepenguin.github.io",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BarryThePenguin/barrythepenguin.github.io.git"
+    },
+    "keywords": [],
+    "author": {
+        "name": "Jonathan Haines",
+        "email": "jonno.haines@gmail.com",
+        "url": "http://barrythepenguin.github.io/"
+    },
+    "license": "MIT",
+    "homepage": "http://barrythepenguin.github.io/"
+}
