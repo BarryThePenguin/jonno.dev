@@ -7,6 +7,9 @@
 // core variables and mixins
 @import "variables";
 
+// dependencies
+@import "print";
+
 // core
 @import "scaffolding";
 @import "type";
@@ -125,4 +128,34 @@ h3:after {
 	border-width: 5px 10px;
 	border-style: solid;
 	border-color: $heading-dark $heading-dark transparent transparent;
+
+	@media print {
+		border: none;
+	}
+}
+
+@media print {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h5 {
+		line-height: 1.5vr;
+		margin-top: 0.25vr;
+		margin-bottom: 0.25vr;
+	}
+
+	a {
+		fill: #000 !important;
+	}
+
+	.container {
+		margin: 0;
+		border: none;
+	}
+
+	.hidden-print {
+		display: none !important;
+	}
 }
