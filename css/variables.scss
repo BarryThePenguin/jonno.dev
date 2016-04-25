@@ -1,0 +1,52 @@
+// colors
+$pink: rgba(255, 85, 170, 100) !default;
+$green: rgba(170, 255, 85, 100) !default;
+$blue: rgba(85, 170, 255, 100) !default;
+$white: rgba(249, 249, 249, 100) !default;
+$black: rgba(5, 5, 5, 100) !default;
+$grey-darker: lighten($black, 13.5%) !default;
+$grey-dark: lighten($black, 20%) !default;
+$grey: lighten($black, 33.5%) !default;
+$grey-light: lighten($black, 46.7%) !default;
+$grey-lighter: lighten($black, 93.5%) !default;
+
+// scaffolding
+$body-bg: #fff !default;
+$text-color: $grey-dark !default;
+$link-color: $blue !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+// typography
+$font-family-sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-serif: 'EB Garamond', Georgia, 'Times New Roman', Times, serif !default;
+$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base: $font-family-serif !default;
+$font-size-base: 20px !default;
+$scale-up: 1.333 !default;
+$scale-down: 0.75 !default;
+$font-size-large: ceil(($font-size-base * $scale-up)) !default;
+$font-size-small: ceil(($font-size-base * $scale-down)) !default;
+
+// headings
+$font-size-h4: $font-size-base !default;
+$font-size-h3: $font-size-h4 * $scale-up !default;
+$font-size-h2: $font-size-h3 * $scale-up !default;
+$font-size-h1: $font-size-h2 * $scale-up !default;
+$font-size-h5: $font-size-h4 * $scale-down !default;
+$font-size-h6: $font-size-h5 * $scale-down !default;
+
+// line height
+$line-height-base: 1.5 !default;
+$headings-font-family: $font-family-sans-serif !default;
+$headings-font-weight: 500 !default;
+$headings-color: inherit !default;
+
+// media queries breakpoints
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-lg-min: 1200px !default;
+
+// type
+$text-muted: $grey-light !default;
+$headings-small-color: $grey-light !default;

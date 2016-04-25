@@ -1,0 +1,19 @@
+* {
+		box-sizing: border-box;
+}
+*:before,
+*:after {
+		box-sizing: border-box;
+}
+
+// Body reset
+html {
+		font-size: 16px;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+		font: #{$font-size-base}/#{$line-height-base} $font-family-base;
+		color: $text-color;
+		background-color: $body-bg;
+}
