@@ -11,10 +11,10 @@ $grey-light: lighten($black, 46.7%) !default;
 $grey-lighter: lighten($black, 93.5%) !default;
 
 // scaffolding
-$body-bg: #fff !default;
+$body-bg: $white !default;
 $text-color: $grey-dark !default;
-$link-color: $blue !default;
-$link-hover-color: darken($link-color, 15%) !default;
+$link-color: $white !default;
+$link-hover-color: $blue !default;
 $link-hover-decoration: underline !default;
 
 // typography
@@ -49,4 +49,4 @@ $screen-lg-min: 1200px !default;
 
 // type
 $text-muted: $grey-light !default;
-$headings-small-color: $grey-light !default;
+$headings-small-color: inherit !default;

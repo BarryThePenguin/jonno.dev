@@ -1,3 +1,7 @@
+// normalize
+@import "~normalize.css/normalize.css";
+
+// fonts
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans);
 
 // core variables and mixins
@@ -7,12 +11,10 @@
 @import "scaffolding";
 @import "type";
 
-// Reset and dependencies
-@import "~normalize.css/normalize.css";
-
 // components
 @import 'loader';
 
+// lost
 @lost gutter 15px;
 @lost flexbox flex;
 
@@ -20,85 +22,107 @@ html {
 	position: relative;
 	height: auto;
 }
-
 body {
-  background-image: repeating-linear-gradient( 45deg, $pink, $pink 10px, $white 10px, $white 20px);
+	// lost-utility: edit;
+	background-image: repeating-linear-gradient( 45deg, $pink, $pink 10px, $white 10px, $white 20px);
 }
-
 .container {
-	margin: 15px;
+	margin: 0.5vr;
 	lost-flex-container: row;
-	min-height: calc(100vh - 20px);
+	min-height: calc(100vh - 1vr);
 	border: 10px solid $black;
-  background-color: $white;
+	background-color: $white;
 }
-
 nav {
-  lost-row: 1 0;
+	width: 100%;
 	height: auto;
-	padding: 0 15px;
+	padding: 0 20px;
 	color: $grey-lighter;
-  background: $grey;
+	background: $grey;
 	text-align: center;
-
-	@media (min-width: 900px) {
-	    lost-column: 1/4;
+	@media (min-width: 768px) {
+		lost-column: 1/2;
 	}
-
+	@media (min-width: 992px) {
+		lost-column: 1/3;
+	}
+	@media (min-width: 1200px) {
+		lost-column: 1/4;
+	}
 	img {
 		border-radius: 50%;
 		display: block;
-    max-width: 80%;
-    height: auto;
-		margin: 2vr auto;
-    padding: 4px;
-    background-color: $white;
+		max-width: 100%;
+		height: auto;
+		margin: 1vr auto;
+		padding: 0.25vr;
+		background-color: $white;
 	}
-
 	a {
 		fill: $white;
 		text-decoration: none;
-
 		&:hover {
 			fill: $green;
 		}
 	}
 }
-
 main {
-	lost-row: 1 0;
 	height: 100%;
-	padding: 0 15px;
-	@media (min-width: 900px) {
-		padding: 0;
-    lost-column: 3/4;
-  }
+	padding: 0 0.5vr;
+	h4 {
+		width: 100%;
+		.small,
+		small {
+			float: right;
+		}
+	}
+	@media (min-width: 768px) {
+		padding: 0 1vr 1vr 0;
+		lost-column: 1/2;
+	}
+	@media (min-width: 992px) {
+		lost-column: 2/3;
+	}
+	@media (min-width: 1200px) {
+		lost-column: 3/4;
+	}
 }
-
+article {
+	lost-flex-container: row;
+	header, section {
+		lost-column: 1/1;
+	}
+	&.strengths section {
+		@media (min-width: 768px) {
+			lost-column: 1/3;
+		}
+	}
+	&.interests section {
+		@media (min-width: 768px) {
+			lost-column: 1/2;
+		}
+	}
+}
 $heading: $blue;
 $heading-dark: darken($heading, 33%);
-
-h2 {
-  position: relative;
-  padding-left: 40px;
-  margin-left: -35px;
-  background: $blue;
-  box-shadow: 0px 2px 4px #888;
-
-	@media (min-width: 900px) {
-		display:inline-block;
+h3 {
+	position: relative;
+	padding-left: 35px;
+	margin-left: -35px;
+	background: $blue;
+	box-shadow: 0 2px 4px #888;
+	@media (min-width: 992px) {
 		width: 400px;
 	}
 }
-
-h2:after {
-  content: '';
-  position: absolute;
-  width: 0;
+h3:after {
+	content: '';
+	position: absolute;
+	width: 0;
 	height: 0;
-  left: 0px;
-  top: 100%;
-  border-width: 5px 10px;
+	left: 0;
+	top: 100%;
+	border-width: 5px 10px;
 	border-style: solid;
 	border-color: $heading-dark $heading-dark transparent transparent;
 }
