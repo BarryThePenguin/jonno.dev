@@ -1,0 +1,11 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Jonathan Haines -- Owner -- BarryThePenguin
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    LostGrid, Normalize.css
