@@ -1,8 +1,7 @@
-// normalize
-@import "~normalize.css/normalize.css";
-
 // fonts
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans);
+
+@typography true;
 
 // core variables and mixins
 @import "variables";
@@ -20,6 +19,7 @@
 // lost
 @lost gutter 15px;
 @lost flexbox flex;
+@lost rounder 100;
 
 html {
 	position: relative;
@@ -30,9 +30,9 @@ body {
 	background-image: repeating-linear-gradient( 45deg, $pink, $pink 10px, $white 10px, $white 20px);
 }
 .container {
-	margin: 0.5vr;
+	margin: 0.5lh;
 	lost-flex-container: row;
-	min-height: calc(100vh - 1vr);
+	min-height: calc(100vh - 1lh);
 	border: 10px solid $black;
 	background-color: $white;
 }
@@ -57,8 +57,8 @@ nav {
 		display: block;
 		max-width: 100%;
 		height: auto;
-		margin: 1vr auto;
-		padding: 0.25vr;
+		margin: 1lh auto;
+		padding: 0.25lh;
 		background-color: $white;
 	}
 	a {
@@ -71,7 +71,7 @@ nav {
 }
 main {
 	height: 100%;
-	padding: 0 0.5vr;
+	padding: 0 0.5lh;
 	h4 {
 		width: 100%;
 		.small,
@@ -80,7 +80,7 @@ main {
 		}
 	}
 	@media (min-width: 768px) {
-		padding: 0 1vr 1vr 0;
+		padding: 1lh 1lh 1lh 0;
 		lost-column: 1/2;
 	}
 	@media (min-width: 992px) {
@@ -141,9 +141,9 @@ h3:after {
 	h4,
 	h5,
 	h5 {
-		line-height: 1.5vr;
-		margin-top: 0.25vr;
-		margin-bottom: 0.25vr;
+		line-height: 1.5lh;
+		margin-top: 0.25lh;
+		margin-bottom: 0.25lh;
 	}
 
 	a {

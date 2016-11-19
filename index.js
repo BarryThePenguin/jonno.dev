@@ -1,8 +1,13 @@
-import './css/site';
-import resume from './views/resume.html';
+const css = require('sheetify');
+const choo = require('choo');
 
-const loading = 3200;
+css('./css/site.scss');
 
-setTimeout(() => {
-	global.document.body.innerHTML = resume;
-}, loading);
+const app = choo();
+
+app.router(route => [
+	route('/', require('./pages/resume'))
+]);
+
+const tree = app.start();
+document.body.appendChild(tree);
