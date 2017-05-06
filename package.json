@@ -26,7 +26,7 @@
     "sheetify": "^6.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
+    "autoprefixer": "^7.0.0",
     "budo": "^10.0.3",
     "lost": "^8.0.0-beta.2",
     "node-sass": "^4.5.2",
