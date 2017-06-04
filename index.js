@@ -1,13 +1,17 @@
 const css = require('sheetify');
 const choo = require('choo');
+const log = require('choo-log');
 
-css('./css/site.scss');
+css('tachyons');
+css('./css/site');
+css('./css/print');
 
 const app = choo();
 
-app.router(route => [
-	route('/', require('./pages/resume'))
-]);
+app.use(log());
 
-const tree = app.start();
-document.body.appendChild(tree);
+app.use(require('./analytics'));
+
+app.route('/', require('./pages/resume'));
+
+app.mount('body');
