@@ -1,9 +1,14 @@
 const css = require('sheetify');
 const html = require('choo/html');
 
+const TITLE = 'Jonathan Haines - resume';
+
 module.exports = mainView;
 
-function mainView() {
+function mainView(state, emit) {
+	if (state.title !== TITLE) {
+		emit(state.events.DOMTITLECHANGE, TITLE);
+	}
 	return html`
 	<body class="garamond serif f4 lh-copy dark-gray">
 		<div class="ma3 ba bw3 bg-mid-gray dn-print-ba">

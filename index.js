@@ -1,6 +1,5 @@
-const css = require('sheetify');
 const choo = require('choo');
-const log = require('choo-log');
+const css = require('sheetify');
 
 css('tachyons');
 css('./css/site');
@@ -8,10 +7,20 @@ css('./css/print');
 
 const app = choo();
 
-app.use(log());
+if (process.env.NODE_ENV !== 'production') {
+	app.use(require('choo-devtools')());
+	app.use(require('choo-log')());
+}
 
 app.use(require('./analytics'));
+app.use(require('choo-service-worker')());
 
-app.route('/', require('./pages/resume'));
+app.route('/', require('./views/main'));
+app.route('/resume', require('./views/resume'));
+app.route('/*', require('./views/404'));
 
-app.mount('body');
+if (module.parent) {
+	module.exports = app;
+} else {
+	app.mount('body');
+}
