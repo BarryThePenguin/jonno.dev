@@ -37,7 +37,7 @@
     "bankai": "^8.0.0",
     "cssnano": "^3.10.0",
     "postcss-cssnext": "^3.0.2",
-    "postcss-import": "^10.0.0",
+    "postcss-import": "^11.0.0",
     "postcss-reporter": "^5.0.0",
     "postcss-url": "^7.0.0",
     "sheetify-postcss": "github:BarryThePenguin/sheetify-postcss#postcss-load-config",
