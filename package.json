@@ -26,7 +26,6 @@
   "dependencies": {
     "choo": "^6.0.0-4",
     "choo-devtools": "^2.2.0",
-    "choo-log": "^7.2.1",
     "choo-service-worker": "^2.3.0",
     "sheet-router": "^4.1.1",
     "sheetify": "^6.1.1",
