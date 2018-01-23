@@ -9,7 +9,6 @@ const app = choo();
 
 if (process.env.NODE_ENV !== 'production') {
 	app.use(require('choo-devtools')());
-	app.use(require('choo-log')());
 }
 
 app.use(require('./analytics'));

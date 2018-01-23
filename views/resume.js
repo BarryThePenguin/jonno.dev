@@ -9,6 +9,7 @@ function mainView(state, emit) {
 	if (state.title !== TITLE) {
 		emit(state.events.DOMTITLECHANGE, TITLE);
 	}
+
 	return html`
 	<body class="garamond serif f4 lh-copy dark-gray">
 		<div class="ma3 ba bw3 bg-mid-gray dn-print-ba">
@@ -30,35 +31,37 @@ const socialLink = css`
 `;
 
 const mainHeader = css`
-	:host {
-		background: var(--heading);
-		box-shadow: 0 2px 4px var(--greyLight);
-
-		@media (min-width: 60em) {
-			width: 400px;
-		}
-	}
-
-	:host:after {
-		content: '';
-		position: absolute;
-		width: 0;
-		height: 0;
-		left: 0;
-		top: 100%;
-		border-width: 0.25rem 0.5rem;
-		border-style: solid;
-		border-color: var(--headingDark) var(--headingDark) transparent transparent;
-
-		@media (min-width: 30em) {
-			border-width: 0.5rem 1rem;
-		}
-
-		@media print {
-			border: none;
-		}
-	}
+	a {}
 `;
+
+// :host {
+// 	background: var(--heading);
+// 	box-shadow: 0 2px 4px var(--greyLight);
+//
+// 	@media (min-width: 60em) {
+// 		width: 400px;
+// 	}
+// }
+//
+// :host:after {
+// 	content: '';
+// 	position: absolute;
+// 	width: 0;
+// 	height: 0;
+// 	left: 0;
+// 	top: 100%;
+// 	border-width: 0.25rem 0.5rem;
+// 	border-style: solid;
+// 	border-color: var(--headingDark) var(--headingDark) transparent transparent;
+//
+// 	@media (min-width: 30em) {
+// 		border-width: 0.5rem 1rem;
+// 	}
+//
+// 	@media print {
+// 		border: none;
+// 	}
+// }
 
 function nav() {
 	return html`
