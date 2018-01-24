@@ -31,41 +31,39 @@ const socialLink = css`
 `;
 
 const mainHeader = css`
-	a {}
-`;
+	:host {
+		background: var(--heading);
+		box-shadow: 0 2px 4px var(--greyLight);
 
-// :host {
-// 	background: var(--heading);
-// 	box-shadow: 0 2px 4px var(--greyLight);
-//
-// 	@media (min-width: 60em) {
-// 		width: 400px;
-// 	}
-// }
-//
-// :host:after {
-// 	content: '';
-// 	position: absolute;
-// 	width: 0;
-// 	height: 0;
-// 	left: 0;
-// 	top: 100%;
-// 	border-width: 0.25rem 0.5rem;
-// 	border-style: solid;
-// 	border-color: var(--headingDark) var(--headingDark) transparent transparent;
-//
-// 	@media (min-width: 30em) {
-// 		border-width: 0.5rem 1rem;
-// 	}
-//
-// 	@media print {
-// 		border: none;
-// 	}
-// }
+		@media (min-width: 60em) {
+			width: 400px;
+		}
+	}
+
+	:host:after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: 0;
+		top: 100%;
+		border-width: 0.25rem 0.5rem;
+		border-style: solid;
+		border-color: var(--headingDark) var(--headingDark) transparent transparent;
+
+		@media (min-width: 30em) {
+			border-width: 0.5rem 1rem;
+		}
+
+		@media print {
+			border: none;
+		}
+	}
+`;
 
 function nav() {
 	return html`
-	<div class="h-100 fl ph3 ph4-ns tc w-50-ns w-50-m w-third-l">
+	<div class="h-100 fl ph3 ph4-ns tc w-third-l">
 		<nav>
 			<img src="https://s.gravatar.com/avatar/c7cda18594e6e6c554f8f9872dd9acbb?s=300" class="center mv4 db ba bw3 br-100 b--near-white border-box dn-print" alt="profile image" />
 			<h1 class="f1 sans-serif normal near-white">
@@ -101,7 +99,7 @@ function nav() {
 
 function main() {
 	return html`
-	<main role="main" class="bg-white fl ph3 ph4-ns w-50-ns w-50-m w-two-thirds-l">
+	<main role="main" class="bg-white fl ph3 ph4-ns w-two-thirds-l">
 		<article class="career">
 			<header>
 				<h2 class="f3 sans-serif normal lh-2 nl4 nl5-ns pl4 pl5-ns relative ${mainHeader}">

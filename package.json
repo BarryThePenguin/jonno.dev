@@ -7,6 +7,7 @@
   "scripts": {
     "inspect": "bankai inspect index.js",
     "start": "bankai start index.js",
+    "prebuild": "del dist",
     "build": "bankai build index.js .",
     "test": "xo && test-deps",
     "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons",
@@ -37,6 +38,7 @@
   "devDependencies": {
     "bankai": "^9.4.0",
     "cssnano": "^3.10.0",
+    "del-cli": "^1.1.0",
     "gh-pages": "^1.1.0",
     "hyperstream": "^1.2.2",
     "postcss-cssnext": "^3.1.0",
