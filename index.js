@@ -7,12 +7,13 @@ css('./css/print');
 
 const app = choo();
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'production') {
+	app.use(require('choo-service-worker')());
+} else {
 	app.use(require('choo-devtools')());
 }
 
 app.use(require('./analytics'));
-app.use(require('choo-service-worker')());
 
 app.route('/', require('./views/main'));
 app.route('/resume', require('./views/resume'));

@@ -3,8 +3,8 @@
 const VERSION = String(Date.now());
 const URLS = [
 	'/',
-	'/bundle.css',
-	'/bundle.js',
+	'/186c09381e03bd28/bundle.css',
+	'/ba9461ae45e384ae/bundle.js',
 	'assets/icon.png'
 ];
 

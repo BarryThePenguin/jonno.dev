@@ -10,7 +10,8 @@
     "build": "bankai build index.js .",
     "test": "xo && test-deps",
     "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons",
-    "deploy": "gh-pages -b master -s dist"
+    "predeploy": "NODE_ENV=production && npm run build",
+    "deploy": "gh-pages --branch master --dist dist"
   },
   "repository": {
     "type": "git",
@@ -29,12 +30,12 @@
     "choo-devtools": "^2.3.3",
     "choo-service-worker": "^2.3.1",
     "sheet-router": "^4.1.1",
-    "sheetify": "^7.0.0",
+    "sheetify": "^7.1.0",
     "tachyons": "^4.9.1",
     "universal-ga": "^1.2.0"
   },
   "devDependencies": {
-    "bankai": "^9.3.1",
+    "bankai": "^9.4.0",
     "cssnano": "^3.10.0",
     "gh-pages": "^1.1.0",
     "hyperstream": "^1.2.2",

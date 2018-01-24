@@ -4,8 +4,8 @@
   "description": "Web Technology Consultant",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffc0cb",
-  "theme_color": "#ffc0cb",
+  "background_color": "#ff55aa",
+  "theme_color": "#ff55aa",
   "icons": [{
     "src": "/assets/icon.png",
     "type": "image/png",
