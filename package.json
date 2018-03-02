@@ -5,14 +5,14 @@
   "description": "Hello, I'm Jonathan",
   "main": "index.js",
   "scripts": {
+    "prebuild": "del dist",
+    "build": "bankai build index.js",
+    "create": "choo-scaffold",
     "inspect": "bankai inspect index.js",
     "start": "bankai start index.js",
-    "prebuild": "del dist",
-    "build": "bankai build index.js .",
-    "test": "xo && test-deps",
-    "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons",
-    "predeploy": "NODE_ENV=production && npm run build",
-    "deploy": "gh-pages --branch master --dist dist"
+    "test": "xo && npm run test-deps",
+    "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons ",
+    "deploy": "npm run build && gh-pages --branch master --dist dist"
   },
   "repository": {
     "type": "git",
@@ -27,26 +27,26 @@
   "license": "MIT",
   "homepage": "http://barrythepenguin.github.io/",
   "dependencies": {
-    "choo": "^6.7.0",
-    "choo-devtools": "^2.3.3",
-    "choo-service-worker": "^2.3.1",
+    "choo": "^6.8.0",
+    "choo-devtools": "^2.3.4",
+    "choo-service-worker": "^2.4.0",
     "sheet-router": "^4.1.1",
-    "sheetify": "^7.1.0",
+    "sheetify": "^7.3.0",
     "tachyons": "^4.9.1",
     "universal-ga": "^1.2.0"
   },
   "devDependencies": {
-    "bankai": "^9.4.0",
+    "bankai": "^9.8.0",
     "cssnano": "^3.10.0",
     "del-cli": "^1.1.0",
     "gh-pages": "^1.1.0",
     "hyperstream": "^1.2.2",
     "postcss-cssnext": "^3.1.0",
-    "postcss-import": "^11.0.0",
+    "postcss-import": "^11.1.0",
     "postcss-reporter": "^5.0.0",
-    "postcss-url": "^7.3.0",
+    "postcss-url": "^7.3.1",
     "sheetify-postcss": "github:BarryThePenguin/sheetify-postcss#postcss-load-config",
-    "xo": "^0.18.2"
+    "xo": "^0.20.0"
   },
   "xo": {
     "envs": "browser",
