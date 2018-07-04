@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "bankai": "^9.8.0",
-    "cssnano": "^3.10.0",
+    "cssnano": "^4.0.0",
     "del-cli": "^1.1.0",
     "gh-pages": "^1.1.0",
     "hyperstream": "^1.2.2",
