@@ -16,6 +16,14 @@ class MyDocument extends Document {
 						rel="author"
 						href="//barrythepenguin.github.io/humans.txt"
 					/>
+					<script
+						// eslint-disable-next-line react/no-danger
+						dangerouslySetInnerHTML={{
+							__html:
+								'window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;'
+						}}
+					/>
+					<script async src="https://www.google-analytics.com/analytics.js" />
 				</Head>
 				<body className="sans-serif">
 					<Main />
