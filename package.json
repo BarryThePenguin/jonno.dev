@@ -10,7 +10,7 @@
     "start": "next start",
     "test": "xo && npm run test-deps",
     "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons ",
-    "export": "npm run build && next export"
+    "now-build": "next build && next export -o dist"
   },
   "repository": {
     "type": "git",
