@@ -1,5 +1,4 @@
-const atImport = require('postcss-import');
-const url = require('postcss-url');
+const tailwindcss = require('tailwindcss');
 const postcssPresetEnv = require('postcss-preset-env');
 const cssnano = require('cssnano');
 const reporter = require('postcss-reporter');
@@ -22,12 +21,14 @@ const customProperties = {
 
 module.exports = {
 	plugins: [
-		atImport(),
-		url(),
+		require('postcss-easy-import'),
+		tailwindcss('./tailwind.config.js'),
+		require('postcss-url'),
 		postcssPresetEnv({
 			stage: 1,
 			importFrom: ['css/variables.css']
 		}),
+		require('autoprefixer'),
 		process.env.NODE_ENV === 'production' && cssnano({autoprefixer: false}),
 		reporter()
 	]

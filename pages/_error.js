@@ -7,7 +7,7 @@ function Error() {
 			<Head>
 				<title>Jonathan Haines - page not found</title>
 			</Head>
-			<h1 className="f-headline pa3 pa4-ns">404 - route not found</h1>
+			<h1 className="f-headline p-4 md:p-8">404 - route not found</h1>
 			<a href="/" className="link black underline">
 				Back to main
 			</a>

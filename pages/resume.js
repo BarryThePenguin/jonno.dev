@@ -4,12 +4,12 @@ import {css} from 'emotion';
 
 function Resume() {
 	return (
-		<div className="garamond serif f4 lh-copy dark-gray">
+		<div className="garamond font-serif text-lg leading-normal text-grey-darkest">
 			<Head>
 				<title>Jonathan Haines - resume</title>
 			</Head>
-			<div className="ma3 ba bw3 bg-mid-gray dn-print-ba">
-				<div className="cf">
+			<div className="m-4 border-solid border-grey-darkest border-8 bg-grey-darker dn-print-ba">
+				<div className="clearfix">
 					<Nav />
 					<Main />
 				</div>
@@ -57,18 +57,18 @@ const mainHeader = css`
 
 function Nav() {
 	return (
-		<div className="h-100 fl ph3 ph4-ns tc w-third-l">
+		<div className="h-full float-left inline px-4 md:px-8 text-center lg:w-1/3">
 			<nav>
 				<img
 					src="https://s.gravatar.com/avatar/c7cda18594e6e6c554f8f9872dd9acbb?s=300"
-					className="center mv4 db ba bw3 br-100 b--near-white border-box dn-print"
+					className="mx-auto my-8 block border-solid border-8 rounded-full border-grey-lightest dn-print"
 					alt="profile image"
 				/>
-				<h1 className="f1 sans-serif normal near-white">
+				<h1 className="text-3xl font-sans font-normal text-white my-8">
 					Jonathan Haines
-					<small className="dib">Web Technology Consultant</small>
+					<small className="inline-block">Web Technology Consultant</small>
 				</h1>
-				<p className="dn-print">
+				<p className="dn-print my-8">
 					<a
 						className={socialLink}
 						href="https://twitter.com/BarryThePenguin"
@@ -107,20 +107,23 @@ function Nav() {
 
 function Main() {
 	return (
-		<main role="main" className="bg-white fl ph3 ph4-ns w-two-thirds-l">
+		<main
+			role="main"
+			className="bg-white float-left inline px-4 md:px-8 lg:w-2/3"
+		>
 			<article className="career">
 				<header>
 					<h2
-						className={`f3 sans-serif normal lh-2 nl4 nl5-ns pl4 pl5-ns relative ${mainHeader}`}
+						className={`text-xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative ${mainHeader}`}
 					>
 						About
 					</h2>
 				</header>
-				<p className="measure">
+				<p className="max-w-md">
 					Passionate about building up new developers, improving experiences
 					between people and technology, and open source projects and software.
 				</p>
-				<p className="measure">
+				<p className="max-w-md">
 					Currently exploring web standards, functional programming and
 					composable user interfaces.
 				</p>
@@ -128,17 +131,17 @@ function Main() {
 			<article className="strengths">
 				<header>
 					<h2
-						className={`f3 sans-serif normal lh-2 nl4 nl5-ns pl4 pl5-ns relative ${mainHeader}`}
+						className={`text-xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative ${mainHeader}`}
 					>
 						Skills
 					</h2>
 				</header>
-				<p className="measure">
+				<p className="max-w-md">
 					Ongoing learning, testing and improvement is an important part of my
 					approach to software development and professional development.
 				</p>
-				<div className="cf">
-					<section className="fl w-100 w-50-ns">
+				<div className="clearfix">
+					<section className="float-left inline w-full md:w-1/2">
 						<p>Programming</p>
 						<ul>
 							<li>Web Applications</li>
@@ -146,7 +149,7 @@ function Main() {
 							<li>.Net</li>
 						</ul>
 					</section>
-					<section className="fl w-100 w-50-ns">
+					<section className="float-left inline w-full md:w-1/2">
 						<p>People</p>
 						<ul>
 							<li>Collaborating</li>
@@ -159,38 +162,38 @@ function Main() {
 			<article className="employment">
 				<header>
 					<h2
-						className={`f3 sans-serif normal lh-2 nl4 nl5-ns pl4 pl5-ns relative ${mainHeader}`}
+						className={`text-xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative ${mainHeader}`}
 					>
 						Work
 					</h2>
 				</header>
-				<h3 className="sans-serif normal">
+				<h3 className="font-sans font-normal">
 					Domain - Front End Developer
-					<small className="fr">September 2016 — Present</small>
+					<small className="float-right">September 2016 — Present</small>
 				</h3>
 				<p>
 					<strong>Key Technologies:</strong> npm, React, SCSS, Mocha, Chai
 				</p>
-				<h3 className="sans-serif normal">
+				<h3 className="font-sans font-normal">
 					RXP Services - Consultant
-					<small className="fr">July 2012 — September 2016</small>
+					<small className="float-right">July 2012 — September 2016</small>
 				</h3>
 				<p>
 					<strong>Key Technologies:</strong> npm, Angular, Bootstrap, Karma,
 					Jasmine, ASP.NET MVC and Web API, Entity Framework, OData, Unity
 					Application Block, xUnit
 				</p>
-				<h3 className="sans-serif normal">
+				<h3 className="font-sans font-normal">
 					Insight4 - Developer{' '}
-					<small className="fr">July 2012 — June 2014</small>
+					<small className="float-right">July 2012 — June 2014</small>
 				</h3>
 				<p>
 					<strong>Key Technologies:</strong> ASP.NET MVC and Web API, Entity
 					Framework, xUnit, Kenod UI, Angular, Bootstrap
 				</p>
-				<h3 className="sans-serif normal">
+				<h3 className="font-sans font-normal">
 					Insight4 - Junior Developer
-					<small className="fr">Summer of 2010 and 2011</small>
+					<small className="float-right">Summer of 2010 and 2011</small>
 				</h3>
 				<p>
 					<strong>Key Technologies:</strong> ASP.NET MVC, NHibernate, HTML5,
@@ -200,13 +203,14 @@ function Main() {
 			<article className="volunteer">
 				<header>
 					<h2
-						className={`f3 sans-serif normal lh-2 nl4 nl5-ns pl4 pl5-ns relative ${mainHeader}`}
+						className={`text-xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative ${mainHeader}`}
 					>
 						Volunteer
 					</h2>
 				</header>
-				<h3 className="sans-serif normal">
-					Vision 100 IT <small className="fr">July 2010 — Present</small>
+				<h3 className="font-sans font-normal">
+					Vision 100 IT{' '}
+					<small className="float-right">July 2010 — Present</small>
 				</h3>
 				<p>
 					Vision 100 IT exists to help churches - particularly church IT
@@ -216,26 +220,27 @@ function Main() {
 			<article className="education">
 				<header>
 					<h2
-						className={`f3 sans-serif normal lh-2 nl4 nl5-ns pl4 pl5-ns relative ${mainHeader}`}
+						className={`text-xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative ${mainHeader}`}
 					>
 						Education
 					</h2>
 				</header>
-				<h3 className="sans-serif normal">
-					University of Tasmania <small className="fr">2008 — 2014</small>
+				<h3 className="font-sans font-normal">
+					University of Tasmania{' '}
+					<small className="float-right">2008 — 2014</small>
 				</h3>
 				<p>Bachelor of Engineering, Computer Systems</p>
 			</article>
 			<article className="interests">
 				<header>
 					<h2
-						className={`f3 sans-serif normal lh-2 nl4 nl5-ns pl4 pl5-ns relative ${mainHeader}`}
+						className={`text-xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative ${mainHeader}`}
 					>
 						Interests
 					</h2>
 				</header>
-				<div className="cf">
-					<section className="fl w-100 w-50-ns">
+				<div className="clearfix">
+					<section className="float-left inline w-full md:w-1/2">
 						<p>Open Source Software</p>
 						<ul>
 							<li>SparkleShare</li>
@@ -244,7 +249,7 @@ function Main() {
 							<li>eslint</li>
 						</ul>
 					</section>
-					<section className="fl w-100 w-50-ns">
+					<section className="float-left inline w-full md:w-1/2">
 						<p>Relaxing</p>
 						<ul>
 							<li>Cycling</li>
@@ -253,8 +258,8 @@ function Main() {
 						</ul>
 					</section>
 				</div>
-				<div className="cf">
-					<section className="fl w-100 w-50-ns">
+				<div className="clearfix">
+					<section className="float-left inline w-full md:w-1/2">
 						<p>Thinking</p>
 						<ul>
 							<li>Theology</li>
@@ -263,7 +268,7 @@ function Main() {
 							<li>Business culture</li>
 						</ul>
 					</section>
-					<section className="fl w-100 w-50-ns">
+					<section className="float-left inline w-full md:w-1/2">
 						<p>Tasty Drinks</p>
 						<ul>
 							<li>Coffee</li>

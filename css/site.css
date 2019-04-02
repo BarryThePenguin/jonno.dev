@@ -1,5 +1,7 @@
 @import "./variables";
-@import "tachyons";
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
 
 body {
   background-image: repeating-linear-gradient(
@@ -18,7 +20,7 @@ svg {
 a {
   color: var(--white);
   text-decoration: none;
-  transition: color 0.2s linear;
+  transition: color .15s ease-in;
 }
 
 a:focus,
@@ -27,8 +29,8 @@ a:hover {
   text-decoration: none;
 }
 
-.lh-2 {
-  line-height: 2;
+p, ul {
+	@apply my-4;
 }
 
 @media print {
@@ -42,8 +44,7 @@ a:hover {
   h4,
   h5,
   h6 {
-    line-height: 1.5;
-    margin: 0;
+    @apply leading-normal m-0;
   }
 
   a {

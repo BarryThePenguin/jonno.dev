@@ -1,3 +1,4 @@
+import 'typeface-eb-garamond';
 import React from 'react';
 import Document, {Html, Head, Main, NextScript} from 'next/document';
 
@@ -11,8 +12,10 @@ class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					<meta name="viewport" content="width=device-width, initial-scale=1" />
-					<meta name="Description" content="Jonathan Haines is software engineer who is passionate about building up new developers, improving experiences between people and technology, and web technologies." />
+					<meta
+						name="Description"
+						content="Jonathan Haines is software engineer who is passionate about building up new developers, improving experiences between people and technology, and web technologies."
+					/>
 					<link
 						type="text/plain"
 						rel="author"
@@ -27,7 +30,7 @@ class MyDocument extends Document {
 					/>
 					<script async src="https://www.google-analytics.com/analytics.js" />
 				</Head>
-				<body className="sans-serif">
+				<body className="font-sans">
 					<Main />
 					<NextScript />
 				</body>
