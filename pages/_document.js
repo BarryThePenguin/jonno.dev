@@ -21,6 +21,7 @@ class MyDocument extends Document {
 						rel="author"
 						href="//barrythepenguin.github.io/humans.txt"
 					/>
+					<link rel="manifest" href="/manifest.json" />
 					<script
 						// eslint-disable-next-line react/no-danger
 						dangerouslySetInnerHTML={{

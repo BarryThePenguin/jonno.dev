@@ -25,7 +25,7 @@
   "license": "MIT",
   "homepage": "https://jonno.dev/",
   "dependencies": {
-    "@mdx-js/tag": "^0.20.3",
+    "@mdx-js/react": "^1.0.15",
     "@zeit/next-css": "^1.0.1",
     "autotrack": "^2.4.1",
     "css-prefers-color-scheme": "^3.1.1",
@@ -57,6 +57,7 @@
     "envs": "browser",
     "parser": "babel-eslint",
     "prettier": true,
-    "extends": "xo-react"
+    "extends": "xo-react",
+    "globals": ["ga"]
   }
 }
