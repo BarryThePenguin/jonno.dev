@@ -2,5 +2,16 @@
   "name": "jonno.dev",
   "version": 2,
   "alias": ["jonno.dev"],
-  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }],
+  "routes": [
+    {
+      "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
+      "headers": { "cache-control": "immutable" }
+    },
+    {
+      "src": "^/(favicon.ico|manifest.json|humans.txt|robots.txt|sitemap.xml|sitemap.xsl)$",
+      "dest": "/static/$1",
+      "headers": { "cache-control": "max-age=300 must-revalidate" }
+    }
+  ]
 }

@@ -30,15 +30,15 @@
     "autotrack": "^2.4.1",
     "css-prefers-color-scheme": "^3.1.1",
     "emotion": "^10.0.9",
-    "next": "^8.0.4",
+    "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "typeface-eb-garamond": "0.0.72"
   },
   "devDependencies": {
-    "@next/mdx": "^8.0.4",
+    "@next/mdx": "^8.1.0",
     "acorn": "^6.1.1",
-    "autoprefixer": "^9.5.0",
+    "autoprefixer": "^9.5.1",
     "babel-eslint": "^10.0.1",
     "cssnano": "^4.1.10",
     "eslint-config-xo": "^0.26.0",
