@@ -28,7 +28,7 @@
     "@mdx-js/react": "^1.0.15",
     "@zeit/next-css": "^1.0.1",
     "autotrack": "^2.4.1",
-    "css-prefers-color-scheme": "^3.1.1",
+    "css-prefers-color-scheme": "^4.0.0",
     "emotion": "^10.0.9",
     "next": "^8.1.0",
     "react": "^16.8.6",
