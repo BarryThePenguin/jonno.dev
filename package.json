@@ -30,7 +30,7 @@
     "autotrack": "^2.4.1",
     "css-prefers-color-scheme": "^3.1.1",
     "emotion": "^10.0.9",
-    "next": "^8.1.0",
+    "next": "^9.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "typeface-eb-garamond": "0.0.72"
