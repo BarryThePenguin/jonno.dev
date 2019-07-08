@@ -36,7 +36,7 @@
     "typeface-eb-garamond": "0.0.72"
   },
   "devDependencies": {
-    "@next/mdx": "^8.1.0",
+    "@next/mdx": "^9.0.0",
     "acorn": "^6.1.1",
     "autoprefixer": "^9.5.1",
     "babel-eslint": "^10.0.1",
