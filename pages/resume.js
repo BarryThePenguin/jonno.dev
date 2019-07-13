@@ -31,10 +31,6 @@ const mainHeader = css`
 	background: var(--heading);
 	box-shadow: 0 2px 4px var(--grayLight);
 
-	@media (min-width: 60em) {
-		width: 400px;
-	}
-
 	&:after {
 		content: '';
 		position: absolute;
@@ -46,7 +42,7 @@ const mainHeader = css`
 		border-style: solid;
 		border-color: var(--headingDark) var(--headingDark) transparent transparent;
 
-		@media (min-width: 30em) {
+		@media (min-width: 768px) {
 			border-width: 0.5rem 1rem;
 		}
 
@@ -109,7 +105,7 @@ function Main() {
 			<article className="career">
 				<header>
 					<h2
-						className={`text-2xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative ${mainHeader}`}
+						className={`text-2xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative md:w-3/5 ${mainHeader}`}
 					>
 						About
 					</h2>
@@ -126,7 +122,7 @@ function Main() {
 			<article className="strengths">
 				<header>
 					<h2
-						className={`text-2xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative ${mainHeader}`}
+						className={`text-2xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative md:w-3/5 ${mainHeader}`}
 					>
 						Skills
 					</h2>
@@ -157,7 +153,7 @@ function Main() {
 			<article className="employment">
 				<header>
 					<h2
-						className={`text-2xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative ${mainHeader}`}
+						className={`text-2xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative md:w-3/5 ${mainHeader}`}
 					>
 						Work
 					</h2>
@@ -205,7 +201,7 @@ function Main() {
 			<article className="volunteer">
 				<header>
 					<h2
-						className={`text-2xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative ${mainHeader}`}
+						className={`text-2xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative md:w-3/5 ${mainHeader}`}
 					>
 						Volunteer
 					</h2>
@@ -222,7 +218,7 @@ function Main() {
 			<article className="education">
 				<header>
 					<h2
-						className={`text-2xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative ${mainHeader}`}
+						className={`text-2xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative md:w-3/5 ${mainHeader}`}
 					>
 						Education
 					</h2>
@@ -236,7 +232,7 @@ function Main() {
 			<article className="interests">
 				<header>
 					<h2
-						className={`text-2xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative ${mainHeader}`}
+						className={`text-2xl font-sans font-normal leading-loose -ml-8 md:-ml-16 pl-16 md:-pl-16 md:my-4 relative md:w-3/5 ${mainHeader}`}
 					>
 						Interests
 					</h2>

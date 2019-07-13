@@ -48,7 +48,7 @@ class MyDocument extends Document {
 					/>
 					<script async src="https://www.google-analytics.com/analytics.js" />
 				</Head>
-				<body className="font-sans">
+				<body className="font-sans leading-normal">
 					<Main />
 					<NextScript />
 				</body>
