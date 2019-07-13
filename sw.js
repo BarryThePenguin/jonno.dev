@@ -11,8 +11,9 @@ self.addEventListener('fetch', e => {
 			if (request) {
 				return request;
 			}
+
 			return self.fetch(e.request);
-		}),
+		})
 	);
 });
 
@@ -21,7 +22,7 @@ self.addEventListener('install', e => {
 	e.waitUntil(
 		self.caches.open(VERSION).then(cache => {
 			return cache.addAll(URLS);
-		}),
+		})
 	);
 });
 
@@ -34,9 +35,10 @@ self.addEventListener('activate', e => {
 					if (keyList[i] !== VERSION) {
 						return self.caches.delete(keyList[i]);
 					}
+
 					return Promise.resolve();
-				}),
+				})
 			);
-		}),
+		})
 	);
 });
