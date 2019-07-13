@@ -1,7 +1,10 @@
 @import "./variables";
-@tailwind preflight;
-@tailwind components;
-@tailwind utilities;
+
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
 
 body {
   background-image: repeating-linear-gradient(

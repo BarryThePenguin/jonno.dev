@@ -4,11 +4,11 @@
 	--blue: hsl(210, 100%, 67%);
 	--white: hsl(0, 0%, 98%);
 	--black: hsl(0, 0, 2%);
-	--greyDarker: hsl(0, 0, 15%);
-	--greyDark: hsl(0, 0, 20%);
-	--grey: hsl(0, 0, 35%);
-	--greyLight: hsl(0, 0, 50%);
-	--greyLighter: hsl(0, 0, 95%);
+	--grayDarker: hsl(0, 0, 15%);
+	--grayDark: hsl(0, 0, 20%);
+	--gray: hsl(0, 0, 35%);
+	--grayLight: hsl(0, 0, 50%);
+	--grayLighter: hsl(0, 0, 95%);
 
 	--heading: var(--blue);
 	--headingDark: hsl(210, 100%, 33%);
