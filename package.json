@@ -51,7 +51,7 @@
     "postcss-reporter": "^6.0.1",
     "postcss-url": "^8.0.0",
     "tailwindcss": "^1.0.5",
-    "xo": "^0.24.0"
+    "xo": "^0.25.0"
   },
   "xo": {
     "envs": "browser",
