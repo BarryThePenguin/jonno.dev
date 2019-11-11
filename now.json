@@ -1,6 +1,5 @@
 {
   "name": "jonno.dev",
   "version": 2,
-  "alias": ["jonno.dev"],
-  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
+  "alias": ["jonno.dev"]
 }
