@@ -44,6 +44,7 @@ const Layout = ({components, children, title}) => (
 	<>
 		<Head>
 			<title>{title}</title>
+			<meta name="theme-color" content={theme.colors.primary} />
 		</Head>
 		<ThemeProvider
 			theme={theme}
