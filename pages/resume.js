@@ -28,7 +28,7 @@ function Resume() {
 			>
 				<Box
 					m={[4, 8]}
-					bg="gray.6"
+					bg="gray.7"
 					sx={{
 						border: 'solid',
 						borderWidth: 8,
