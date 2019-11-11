@@ -1,21 +1,30 @@
 import React from 'react';
-import Link from 'next/link';
+import {ThemeProvider} from 'theme-ui';
+import Layout from '../components/layout';
+import Home from '../content/home.md';
+
+const heading = {
+	fontSize: [4, 6],
+	p: [4, 8],
+	my: [20, 24],
+	background: 'white',
+	fontWeight: 'bold'
+};
+
+const theme = {
+	styles: {
+		h1: heading,
+		h2: heading
+	}
+};
 
 function Index() {
 	return (
-		<>
-			<h1 className="text-3xl md:text-6xl font-bold p-4 my-24 md:p-8 bg-white">
-				Jonathan Haines
-			</h1>
-			<h2 className="text-3xl md:text-6xl font-bold p-4 my-24 md:p-8 bg-white">
-				Frontend Developer
-			</h2>
-			<Link href="/resume">
-				<a className="text-3xl md:text-5xl font-bold block p-4 md:p-8 bg-white link text-gray-600 underline hover:underline">
-					See what I do
-				</a>
-			</Link>
-		</>
+		<Layout>
+			<ThemeProvider theme={theme}>
+				<Home />
+			</ThemeProvider>
+		</Layout>
 	);
 }
 

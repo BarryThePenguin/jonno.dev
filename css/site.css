@@ -1,10 +1,9 @@
 @import "./variables";
 
-@import "tailwindcss/base";
-
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
+html,
+body {
+	min-height: 100%;
+}
 
 body {
   background-image: repeating-linear-gradient(
@@ -32,24 +31,7 @@ a:hover {
   text-decoration: none;
 }
 
-p, ul {
-	@apply my-4;
-}
-
 @media print {
-  p,
-  a,
-  ul,
-  li,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply leading-normal m-0;
-  }
-
   a {
     color: #000 !important;
   }
@@ -64,5 +46,9 @@ p, ul {
 
   .dn-print-ba {
     border: none;
+	}
+
+	.dn-print-ba::after {
+    border: none !important;
   }
 }
