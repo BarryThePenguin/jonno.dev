@@ -38,6 +38,8 @@ class MyDocument extends Document {
 						href="/favicon-16x16.png"
 					/>
 					<link rel="manifest" href="/manifest.json" />
+					<link rel="preconnect" href="//www.google-analytics.com" />
+					<link rel="dns-prefetch" href="//www.google-analytics.com" />
 					<script
 						// eslint-disable-next-line react/no-danger
 						dangerouslySetInnerHTML={{
