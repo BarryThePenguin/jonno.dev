@@ -1,4 +1,3 @@
-import 'typeface-eb-garamond';
 import '../css/site.css';
 import '../css/print.css';
 
