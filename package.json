@@ -9,8 +9,7 @@
     "build": "next build",
     "start": "next start",
     "test": "xo && npm run test-deps",
-    "test-deps": "dependency-check . && dependency-check .",
-    "now-build": "next build && next export -o dist"
+    "test-deps": "dependency-check . && dependency-check ."
   },
   "repository": {
     "type": "git",
