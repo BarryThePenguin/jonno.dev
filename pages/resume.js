@@ -72,7 +72,7 @@ function Nav() {
 						Web Technology Consultant
 					</small>
 				</Text>
-				<Text my="8" className="dn-print">
+				<Text as="p" my="4" className="dn-print">
 					<SocialLink
 						href="https://twitter.com/BarryThePenguin"
 						title="Twitter"
@@ -89,7 +89,7 @@ function Nav() {
 						<LinkedIn />
 					</SocialLink>
 				</Text>
-				<Text>
+				<Text as="p" my="4">
 					<a href="mailto:jonno.haines@gmail.com">jonno.haines@gmail.com</a>
 				</Text>
 			</nav>
