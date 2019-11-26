@@ -40,7 +40,7 @@
     "react-dom": "^16.11.0",
     "theme-ui": "^0.2.46",
     "typeface-eb-garamond": "0.0.72",
-    "url-loader": "^2.2.0"
+    "url-loader": "^3.0.0"
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.5.1",
