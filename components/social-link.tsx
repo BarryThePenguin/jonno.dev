@@ -2,7 +2,13 @@
 import {jsx} from 'theme-ui';
 import PropTypes from 'prop-types';
 
-function SocialLink({children, href, title}) {
+type SocialLinkProps = {
+	href: string;
+	title: string;
+	children: React.ReactNode;
+};
+
+const SocialLink: React.FC<SocialLinkProps> = ({children, href, title}) => {
 	const green = {
 		color: 'green.2'
 	};
@@ -20,7 +26,7 @@ function SocialLink({children, href, title}) {
 			{children}
 		</a>
 	);
-}
+};
 
 SocialLink.propTypes = {
 	children: PropTypes.node.isRequired,

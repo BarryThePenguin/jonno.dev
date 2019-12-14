@@ -16,7 +16,7 @@ const components = {
 	h2: Header
 };
 
-function Resume() {
+const Resume: React.FC = () => {
 	return (
 		<Layout components={components} title="Jonathan Haines - resume">
 			<div
@@ -43,9 +43,9 @@ function Resume() {
 			</div>
 		</Layout>
 	);
-}
+};
 
-function Nav() {
+const Nav: React.FC = () => {
 	return (
 		<Box
 			px={[4, 12]}
@@ -95,9 +95,9 @@ function Nav() {
 			</nav>
 		</Box>
 	);
-}
+};
 
-function Main() {
+const Main: React.FC = () => {
 	return (
 		<Box
 			as="main"
@@ -129,6 +129,6 @@ function Main() {
 			</article>
 		</Box>
 	);
-}
+};
 
 export default Resume;

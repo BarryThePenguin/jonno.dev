@@ -1,5 +1,7 @@
+/* eslint-disable import/no-unassigned-import */
 import '../css/site.css';
 import '../css/print.css';
+/* eslint-enable import/no-unassigned-import */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -10,37 +12,49 @@ import Link from 'next/link';
 import {Styled, ThemeProvider} from 'theme-ui';
 import theme from '../theme';
 
-const Analytics = dynamic(() => import('./analytics'), {ssr: false});
+const Analytics = dynamic(async () => import('./analytics'), {
+	ssr: false
+});
 
-function Reset() {
-	return (
-		<Global
-			styles={{
-				body: {
-					margin: 0
-				}
-			}}
-		/>
-	);
-}
+const Reset: React.FC = () => (
+	<Global
+		styles={{
+			body: {
+				margin: 0
+			}
+		}}
+	/>
+);
 
-const baseComponents = {
-	a({children, href, className}) {
-		return (
-			<Link href={href}>
-				<a className={className}>{children} </a>
-			</Link>
-		);
-	}
+type aProps = {
+	href: string;
+	className: string;
+	children: React.ReactNode;
 };
 
-baseComponents.a.propTypes = {
+const a: React.FC<aProps> = ({href, className, children}) => (
+	<Link href={href}>
+		<a className={className}>{children} </a>
+	</Link>
+);
+
+a.propTypes = {
 	href: PropTypes.string.isRequired,
 	className: PropTypes.string.isRequired,
 	children: PropTypes.node.isRequired
 };
 
-const Layout = ({components, children, title}) => (
+const baseComponents = {
+	a
+};
+
+type LayoutProps = {
+	components?: {};
+	children?: React.ReactNode;
+	title?: string;
+};
+
+const Layout: React.FC<LayoutProps> = ({components, children, title}) => (
 	<>
 		<Head>
 			<title>{title}</title>
@@ -48,6 +62,7 @@ const Layout = ({components, children, title}) => (
 		</Head>
 		<ThemeProvider
 			theme={theme}
+			// @ts-ignore components needs to be added to types
 			components={{...baseComponents, ...components}}
 		>
 			<Reset />

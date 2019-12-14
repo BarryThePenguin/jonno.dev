@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {Heading} from '@theme-ui/components';
 import Layout from '../components/layout';
 
-function Error() {
+const Error: React.FC = () => {
 	return (
 		<Layout title="Jonathan Haines - page not found">
 			<Heading as="h1" className="f-headline p-4 md:p-8">
@@ -14,6 +14,6 @@ function Error() {
 			</Link>
 		</Layout>
 	);
-}
+};
 
 export default Error;

@@ -4,7 +4,7 @@ import {Heading, Box} from '@theme-ui/components';
 import {TypeScale, TypeStyle, ColorPalette} from '@theme-ui/style-guide';
 import Layout from '../components/layout';
 
-function Index() {
+const Index: React.FC = () => {
 	return (
 		<Layout>
 			<Box
@@ -26,6 +26,6 @@ function Index() {
 			</Box>
 		</Layout>
 	);
-}
+};
 
 export default Index;

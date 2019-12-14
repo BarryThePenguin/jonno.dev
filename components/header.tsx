@@ -3,7 +3,7 @@ import {jsx} from 'theme-ui';
 import PropTypes from 'prop-types';
 import {Heading} from '@theme-ui/components';
 
-const Header = ({children}) => (
+const Header: React.FC = ({children}) => (
 	<header>
 		<Heading
 			as="h2"

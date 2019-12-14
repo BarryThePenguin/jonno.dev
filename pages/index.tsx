@@ -18,7 +18,7 @@ const theme = {
 	}
 };
 
-function Index() {
+const Index: React.FC = () => {
 	return (
 		<Layout>
 			<ThemeProvider theme={theme}>
@@ -26,6 +26,6 @@ function Index() {
 			</ThemeProvider>
 		</Layout>
 	);
-}
+};
 
 export default Index;
