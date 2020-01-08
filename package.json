@@ -24,7 +24,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "@emotion/core": "^10.0.22",
+    "@emotion/core": "^10.0.27",
     "@mdx-js/react": "^1.5.1",
     "@theme-ui/color": "^0.2.49",
     "@theme-ui/components": "^0.2.50",
