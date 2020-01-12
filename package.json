@@ -38,7 +38,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "theme-ui": "^0.2.49",
+    "theme-ui": "^0.2.52",
     "typeface-eb-garamond": "1.1.3"
   },
   "devDependencies": {
