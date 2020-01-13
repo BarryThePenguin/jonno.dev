@@ -52,7 +52,7 @@
     "autoprefixer": "^9.7.3",
     "cssnano": "^4.1.10",
     "eslint-config-xo": "^0.27.2",
-    "eslint-config-xo-react": "^0.20.0",
+    "eslint-config-xo-react": "^0.22.0",
     "eslint-config-xo-typescript": "^0.23.0",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0",
