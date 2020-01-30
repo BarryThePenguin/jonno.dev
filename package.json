@@ -49,7 +49,7 @@
     "@types/theme-ui": "^0.2.6",
     "@typescript-eslint/eslint-plugin": "^2.16.0",
     "@typescript-eslint/parser": "^2.18.0",
-    "autoprefixer": "^9.7.3",
+    "autoprefixer": "^9.7.4",
     "cssnano": "^4.1.10",
     "eslint-config-xo": "^0.27.2",
     "eslint-config-xo-react": "^0.22.0",
