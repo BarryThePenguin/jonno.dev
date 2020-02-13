@@ -1,5 +1,5 @@
 # barrythepenguin
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/BarryThePenguin/jonno.dev.svg)](https://greenkeeper.io/)
+[![Dependabot badge](https://badgen.net/dependabot/BarryThePenguin/jonno.dev/?icon=dependabot)](https://dependabot.com/)
 
 Hello 👋🏻
