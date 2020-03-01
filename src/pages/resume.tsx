@@ -1,9 +1,7 @@
 /** @jsx jsx */
-import {jsx} from 'theme-ui';
-import {Box, Image, Text} from '@theme-ui/components';
+import {jsx, Box, Image, Text, Link} from 'theme-ui';
 import Layout from '../components/layout';
 import Header from '../components/header';
-import SocialLink from '../components/social-link';
 import {Twitter, GitHub, LinkedIn} from '../components/icons';
 import About from '../content/about.md';
 import Skills from '../content/skills.md';
@@ -22,8 +20,7 @@ const Resume: React.FC = () => {
 			<div
 				sx={{
 					fontSize: 3,
-					lineHeight: 'body',
-					color: 'gray.8'
+					lineHeight: 'body'
 				}}
 			>
 				<Box
@@ -72,25 +69,33 @@ const Nav: React.FC = () => {
 						Web Technology Consultant
 					</small>
 				</Text>
-				<Text as="p" my="4" className="dn-print">
-					<SocialLink
+				<Text as="p" my="4" color="white" className="dn-print">
+					<Link
+						variant="social"
 						href="https://twitter.com/BarryThePenguin"
 						title="Twitter"
 					>
 						<Twitter />
-					</SocialLink>
-					<SocialLink href="https://github.com/BarryThePenguin" title="GitHub">
+					</Link>
+					<Link
+						variant="social"
+						href="https://github.com/BarryThePenguin"
+						title="GitHub"
+					>
 						<GitHub />
-					</SocialLink>
-					<SocialLink
+					</Link>
+					<Link
+						variant="social"
 						href="https://au.linkedin.com/in/jonnohaines"
 						title="LinkedIn"
 					>
 						<LinkedIn />
-					</SocialLink>
+					</Link>
 				</Text>
 				<Text as="p" my="4">
-					<a href="mailto:jonno.haines@gmail.com">jonno.haines@gmail.com</a>
+					<Link href="mailto:jonno.haines@gmail.com" color="white">
+						jonno.haines@gmail.com
+					</Link>
 				</Text>
 			</nav>
 		</Box>

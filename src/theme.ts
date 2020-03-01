@@ -14,6 +14,7 @@ const heading = {
 
 // https://gka.github.io/palettes/
 const baseColours = {
+	white: '#fff',
 	// Blue hsl(210, 100%, 67%)
 	blue: [
 		null,
@@ -160,7 +161,8 @@ export default {
 	},
 	fonts: {
 		body: '"EB Garamond", serif',
-		heading: '"Avenir Next", sans-serif',
+		heading:
+			'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
 		monospace: 'Menlo, monospace'
 	},
 	fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
@@ -175,12 +177,12 @@ export default {
 	},
 	colors: {
 		...baseColours,
-		text: '#000',
-		background: '#fff',
-
+		text: baseColours.gray[8],
+		background: `#fff`,
 		primary: baseColours.blue[4],
 		primaryHover: baseColours.blue[5],
-		secondary: baseColours.gray[6]
+		secondary: baseColours.gray[6],
+		headingDark: baseColours.blue[7]
 	},
 	sizes,
 	images: {
@@ -200,6 +202,46 @@ export default {
 			color: 'white',
 			fontFamily: 'heading',
 			fontWeight: 'body'
+		},
+		banner: {
+			position: 'relative',
+			my: [3, 4],
+			ml: [-8, -16],
+			pl: [8, 16],
+			fontSize: 4,
+			width: ['full', '3/5'],
+			bg: 'primary',
+			boxShadow: '0 2px 4px #718096',
+
+			'&:after': {
+				content: '" "',
+				position: 'absolute',
+				width: 0,
+				height: 0,
+				left: 0,
+				top: '100%',
+				borderStyle: 'solid',
+				borderColor: `${baseColours.blue[7]} ${baseColours.blue[7]} transparent transparent`,
+				borderWidth: ['0.25rem 0.5rem', '0.5rem 1rem']
+			}
+		}
+	},
+	links: {
+		social: {
+			color: 'inherit',
+			textDecoration: 'none',
+			'&:active': {
+				color: 'green.2',
+				textDecoration: 'none'
+			},
+			'&:focus': {
+				color: 'green.2',
+				textDecoration: 'none'
+			},
+			'&:hover': {
+				color: 'green.2',
+				textDecoration: 'none'
+			}
 		}
 	},
 	styles: {
@@ -210,9 +252,9 @@ export default {
 		},
 		a: {
 			color: 'secondary',
-			textDecoration: 'underline',
+			transition: 'color .15s ease-in',
 			':hover': {
-				textDecoration: 'underline'
+				color: 'primaryHover'
 			}
 		},
 		h1: {

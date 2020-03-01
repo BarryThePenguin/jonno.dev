@@ -1,0 +1,21 @@
+@media print {
+  a {
+    color: #000 !important;
+  }
+
+  .dn-print {
+    display: none;
+  }
+
+  .db-print {
+    display: block;
+  }
+
+  .dn-print-ba {
+    border: none;
+	}
+
+	.dn-print-ba::after {
+    border: none !important;
+  }
+}
