@@ -17,27 +17,20 @@ const components = {
 const Resume: React.FC = () => {
 	return (
 		<Layout components={components} title="Jonathan Haines - resume">
-			<div
+			<Box
+				m={[4, 8]}
+				bg="gray.7"
 				sx={{
-					fontSize: 3,
-					lineHeight: 'body'
+					border: 'solid',
+					borderWidth: 8,
+					borderColor: 'gray.8',
+					display: ['block', 'block', 'block', 'flex']
 				}}
+				className="dn-print-ba"
 			>
-				<Box
-					m={[4, 8]}
-					bg="gray.7"
-					sx={{
-						border: 'solid',
-						borderWidth: 8,
-						borderColor: 'gray.8',
-						display: ['block', 'block', 'block', 'flex']
-					}}
-					className="dn-print-ba"
-				>
-					<Nav />
-					<Main />
-				</Box>
-			</div>
+				<Nav />
+				<Main />
+			</Box>
 		</Layout>
 	);
 };

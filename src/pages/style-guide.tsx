@@ -1,13 +1,14 @@
 /** @jsx jsx */
-import {jsx} from 'theme-ui';
-import {Heading, Box} from '@theme-ui/components';
+import {jsx, Heading, Grid} from 'theme-ui';
 import {TypeScale, TypeStyle, ColorPalette} from '@theme-ui/style-guide';
 import Layout from '../components/layout';
 
 const Index: React.FC = () => {
 	return (
 		<Layout>
-			<Box
+			<Grid
+				columns={1}
+				gap={3}
 				sx={{
 					bg: 'white',
 					m: 8,
@@ -23,7 +24,7 @@ const Index: React.FC = () => {
 					lineHeight="heading"
 				/>
 				<TypeStyle fontFamily="body" fontWeight="body" lineHeight="body" />
-			</Box>
+			</Grid>
 		</Layout>
 	);
 };

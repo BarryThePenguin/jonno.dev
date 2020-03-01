@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import {Global} from '@emotion/core';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import {Styled, ThemeProvider} from 'theme-ui';
+import {ThemeProvider} from 'theme-ui';
 import {fontFace} from 'polished';
 import theme from '../theme';
 import Link from './link';
@@ -20,21 +20,11 @@ const Analytics = dynamic(async () => import('./analytics'), {
 const Reset: FC = () => (
 	<Global
 		styles={{
-			'html, body': {
-				minHeight: '100%'
+			'html, body, #__next': {
+				height: '100%'
 			},
 			svg: {
 				fill: 'currentColor'
-			},
-			body: {
-				margin: 0,
-				backgroundImage: `repeating-linear-gradient(
-					45deg,
-					${theme.colors.pink[4]},
-					${theme.colors.pink[4]} 10px,
-					${theme.colors.white} 10px,
-					${theme.colors.white} 20px
-				)`
 			}
 		}}
 	/>
@@ -86,7 +76,7 @@ const Layout: React.FC<LayoutProps> = ({components, children, title}) => (
 			// @ts-ignore components needs to be added to types
 			components={{...baseComponents, ...components}}
 		>
-			<Styled.root>{children}</Styled.root>
+			{children}
 		</ThemeProvider>
 		<Analytics />
 	</>

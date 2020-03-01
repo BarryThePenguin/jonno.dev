@@ -132,7 +132,8 @@ const sizes = {
 	'11/12': '91.666667%',
 	full: '100%',
 	screenHeight: '100vh',
-	screenWidth: '100vw'
+	screenWidth: '100vw',
+	container: '50%'
 };
 
 export default {
@@ -246,9 +247,18 @@ export default {
 	},
 	styles: {
 		root: {
+			margin: 0,
+			fontSize: 3,
 			fontFamily: 'body',
 			lineHeight: 'body',
-			fontWeight: 'body'
+			fontWeight: 'body',
+			backgroundImage: `repeating-linear-gradient(
+				45deg,
+				${baseColours.pink[4]},
+				${baseColours.pink[4]} 10px,
+				${baseColours.white} 10px,
+				${baseColours.white} 20px
+			)`
 		},
 		a: {
 			color: 'secondary',

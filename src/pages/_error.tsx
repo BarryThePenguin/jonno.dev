@@ -1,17 +1,21 @@
-import React from 'react';
-import Link from 'next/link';
-import {Heading} from '@theme-ui/components';
+/** @jsx jsx */
+import {jsx, Flex, Grid, Heading, Container} from 'theme-ui';
 import Layout from '../components/layout';
+import Link from '../components/link';
 
 const Error: React.FC = () => {
 	return (
 		<Layout title="Jonathan Haines - page not found">
-			<Heading as="h1" className="f-headline p-4 md:p-8">
-				404 - route not found
-			</Heading>
-			<Link href="/">
-				<a className="link gray-900 underline">Back to main</a>
-			</Link>
+			<Flex
+				sx={{height: '100%', alignItems: 'center', justifyContent: 'center'}}
+			>
+				<Container bg="white" p={4}>
+					<Grid columns={1} gap={3}>
+						<Heading as="h1">404 - page not found</Heading>
+						<Link href="/">Back to main</Link>
+					</Grid>
+				</Container>
+			</Flex>
 		</Layout>
 	);
 };

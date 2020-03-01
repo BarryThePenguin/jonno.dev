@@ -1,7 +1,13 @@
+const bundleAnalyzer = require('@next/bundle-analyzer');
 const withOffline = require('next-offline')
 const withCSS = require('@zeit/next-css');
-const withMDX = require('@next/mdx')({
+const nextMDX = require('@next/mdx');
+const withMDX = nextMDX({
 	extension: /\.mdx?$/
+});
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true'
 });
 
 const nextConfig = {
@@ -32,4 +38,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withCSS(withMDX(withOffline(nextConfig)));
+module.exports = withBundleAnalyzer(withCSS(withMDX(withOffline(nextConfig))));
