@@ -46,7 +46,7 @@
     "@next/mdx": "^9.2.2",
     "@types/google.analytics": "0.0.40",
     "@types/react": "^16.9.23",
-    "@types/theme-ui": "^0.3.0",
+    "@types/theme-ui": "^0.3.1",
     "@typescript-eslint/eslint-plugin": "^2.21.0",
     "@typescript-eslint/parser": "^2.21.0",
     "cssnano": "^4.1.10",
