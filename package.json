@@ -57,7 +57,7 @@
     "eslint-plugin-react-hooks": "^3.0.0",
     "prettier-plugin-package": "^0.3.1",
     "typescript": "^3.8.3",
-    "xo": "^0.27.2"
+    "xo": "^0.28.3"
   },
   "xo": {
     "envs": "browser",
