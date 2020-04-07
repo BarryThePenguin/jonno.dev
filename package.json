@@ -41,7 +41,7 @@
     "typeface-eb-garamond": "^1.1.4"
   },
   "devDependencies": {
-    "@mdx-js/loader": "^1.5.7",
+    "@mdx-js/loader": "^1.5.8",
     "@next/bundle-analyzer": "^9.3.4",
     "@next/mdx": "^9.3.4",
     "@types/google.analytics": "0.0.40",
