@@ -1,8 +1,3 @@
-/* eslint-disable import/no-unassigned-import */
-import '../css/site.css';
-import '../css/print.css';
-/* eslint-enable import/no-unassigned-import */
-
 import React, {FC} from 'react';
 import PropTypes from 'prop-types';
 import {Global} from '@emotion/core';
