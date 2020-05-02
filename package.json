@@ -19,8 +19,7 @@
     "build": "next build",
     "dev": "next",
     "start": "next start",
-    "test": "xo && npm run test-deps",
-    "test-deps": "dependency-check . && dependency-check ."
+    "test": "xo"
   },
   "keywords": [],
   "dependencies": {
@@ -52,7 +51,8 @@
     "eslint-config-xo-react": "^0.23.0",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^4.0.0",
-    "prettier-plugin-package": "^0.3.1",
+    "prettier": "^2.0.5",
+    "prettier-plugin-package": "^1.0.0",
     "typescript": "^3.8.3",
     "xo": "^0.30.0"
   },
@@ -64,6 +64,9 @@
     ],
     "globals": [
       "ga"
-    ]
+    ],
+    "rules": {
+      "@typescript-eslint/prefer-readonly-parameter-types": "off"
+    }
   }
 }

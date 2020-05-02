@@ -251,18 +251,17 @@ export default {
 			fontSize: 3,
 			fontFamily: 'body',
 			lineHeight: 'body',
-			fontWeight: 'body',
-			backgroundImage: `repeating-linear-gradient(
-				45deg,
-				${baseColours.pink[4]},
-				${baseColours.pink[4]} 10px,
-				${baseColours.white} 10px,
-				${baseColours.white} 20px
-			)`
+			fontWeight: 'body'
 		},
 		a: {
 			color: 'secondary',
 			transition: 'color .15s ease-in',
+			':active': {
+				color: 'primaryHover'
+			},
+			':focus': {
+				color: 'primaryHover'
+			},
 			':hover': {
 				color: 'primaryHover'
 			}

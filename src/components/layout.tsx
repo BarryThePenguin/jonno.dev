@@ -1,9 +1,10 @@
-import React, {FC} from 'react';
+/** @jsx jsx */
+import {jsx, ThemeProvider} from 'theme-ui';
+import {FC} from 'react';
 import PropTypes from 'prop-types';
 import {Global} from '@emotion/core';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import {ThemeProvider} from 'theme-ui';
 import {fontFace} from 'polished';
 import theme from '../theme';
 import Link from './link';
@@ -71,7 +72,20 @@ const Layout: React.FC<LayoutProps> = ({components, children, title}) => (
 			// @ts-ignore components needs to be added to types
 			components={{...baseComponents, ...components}}
 		>
-			{children}
+			<div
+				sx={{
+					height: '100%',
+					backgroundImage: `repeating-linear-gradient(
+				45deg,
+				${theme.colors.pink[4]},
+				${theme.colors.pink[4]} 10px,
+				${theme.colors.white} 10px,
+				${theme.colors.white} 20px
+			)`
+				}}
+			>
+				{children}
+			</div>
 		</ThemeProvider>
 		<Analytics />
 	</>
