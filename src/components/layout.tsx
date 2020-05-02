@@ -74,7 +74,7 @@ const Layout: React.FC<LayoutProps> = ({components, children, title}) => (
 		>
 			<div
 				sx={{
-					height: '100%',
+					minHeight: '100%',
 					backgroundImage: `repeating-linear-gradient(
 				45deg,
 				${theme.colors.pink[4]},
