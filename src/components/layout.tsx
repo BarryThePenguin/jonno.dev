@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx, ThemeProvider} from 'theme-ui';
+import {jsx, Box, ThemeProvider} from 'theme-ui';
 import {FC} from 'react';
 import PropTypes from 'prop-types';
 import {Global} from '@emotion/core';
@@ -49,30 +49,48 @@ const Fonts: FC = () => (
 	</>
 );
 
-const baseComponents = {
-	a: Link
+type WrapperProps = {
+	background?: string;
 };
 
-type LayoutProps = {
-	components?: Record<string, unknown>;
-	children?: React.ReactNode;
-	title?: string;
+const Wrapper: FC<WrapperProps> = ({background, ...props}) => {
+	if (background) {
+		return (
+			<Box
+				bg={background}
+				p={8}
+				sx={{
+					border: 'solid',
+					borderWidth: 8,
+					borderColor: 'gray.8'
+				}}
+				{...props}
+			/>
+		);
+	}
+
+	return <Box {...props} />;
 };
 
-const Layout: React.FC<LayoutProps> = ({components, children, title}) => (
+Wrapper.propTypes = {
+	background: PropTypes.string
+};
+
+const components = {
+	a: Link,
+	wrapper: Wrapper
+};
+
+const Layout: React.FC = ({children}) => (
 	<>
 		<Head>
-			<title>{title}</title>
 			<meta name="theme-color" content={theme.colors.primary} />
 		</Head>
 		<Reset />
 		<Fonts />
-		<ThemeProvider
-			theme={theme}
-			// @ts-ignore components needs to be added to types
-			components={{...baseComponents, ...components}}
-		>
-			<div
+		<ThemeProvider theme={theme} components={components}>
+			<Box
+				p={[4, 8]}
 				sx={{
 					minHeight: '100%',
 					backgroundImage: `repeating-linear-gradient(
@@ -85,22 +103,14 @@ const Layout: React.FC<LayoutProps> = ({components, children, title}) => (
 				}}
 			>
 				{children}
-			</div>
+			</Box>
 		</ThemeProvider>
 		<Analytics />
 	</>
 );
 
 Layout.propTypes = {
-	children: PropTypes.node.isRequired,
-	// @ts-ignore components needs to be added to types
-	components: PropTypes.object,
-	title: PropTypes.string
-};
-
-Layout.defaultProps = {
-	components: undefined,
-	title: 'Jonathan Haines'
+	children: PropTypes.node.isRequired
 };
 
 export default Layout;

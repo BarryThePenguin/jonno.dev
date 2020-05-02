@@ -5,9 +5,14 @@ import '../css/print.css';
 import React, {FC} from 'react';
 import PropTypes from 'prop-types';
 import {AppProps} from 'next/app';
+import Layout from '../components/layout';
 
 const MyApp: FC<AppProps> = ({Component, pageProps}) => {
-	return <Component {...pageProps} />;
+	return (
+		<Layout>
+			<Component {...pageProps} />
+		</Layout>
+	);
 };
 
 MyApp.propTypes = {

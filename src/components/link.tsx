@@ -1,22 +1,27 @@
-import React, {FC} from 'react';
+import React, {FC, HTMLProps} from 'react';
 import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 import {Link as ThemeUILink} from 'theme-ui';
 
-type LinkProps = {
-	href: string;
-	children: React.ReactNode;
-};
+type LinkProps = HTMLProps<HTMLAnchorElement>;
 
-const Link: FC<LinkProps> = ({href, children}) => (
-	<NextLink passHref href={href}>
-		<ThemeUILink>{children}</ThemeUILink>
-	</NextLink>
-);
+const Link: FC<LinkProps> = ({href, ...props}) => {
+	const isApi = href.startsWith('/api/');
+
+	if (isApi || props.target === '_blank') {
+		return <ThemeUILink href={href} {...props} />;
+	}
+
+	return (
+		<NextLink passHref href={href}>
+			<ThemeUILink {...props} />
+		</NextLink>
+	);
+};
 
 Link.propTypes = {
 	href: PropTypes.string.isRequired,
-	children: PropTypes.node.isRequired
+	target: PropTypes.string
 };
 
 export default Link;

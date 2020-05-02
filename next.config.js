@@ -1,8 +1,14 @@
 const bundleAnalyzer = require('@next/bundle-analyzer');
 const withOffline = require('next-offline');
 const nextMDX = require('@next/mdx');
+const images = require('remark-images');
+const externalLinks = require('remark-external-links');
+
 const withMDX = nextMDX({
-	extension: /\.mdx?$/
+	extension: /\.mdx?$/,
+	options: {
+		remarkPlugins: [externalLinks, images]
+	}
 });
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -10,6 +16,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 const nextConfig = {
+	pageExtensions: ['js', 'jsx', 'tsx', 'md', 'mdx'],
 	target: 'serverless',
 	transformManifest: (manifest) => ['/'].concat(manifest), // Add the homepage to the cache
 	// Trying to set NODE_ENV=production when running yarn dev causes a build-time error so we

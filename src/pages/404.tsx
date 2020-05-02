@@ -1,13 +1,20 @@
 /** @jsx jsx */
 import {jsx, Flex, Grid, Heading, Container} from 'theme-ui';
-import Layout from '../components/layout';
+import Head from 'next/head';
 import Link from '../components/link';
 
 const Error: React.FC = () => {
 	return (
-		<Layout title="Jonathan Haines - page not found">
+		<>
+			<Head>
+				<title>Jonathan Haines - page not found</title>
+			</Head>
 			<Flex
-				sx={{height: '100%', alignItems: 'center', justifyContent: 'center'}}
+				sx={{
+					flexDirection: 'column',
+					justifyItems: 'center',
+					alignContent: 'center'
+				}}
 			>
 				<Container bg="white" p={4}>
 					<Grid columns={1} gap={3}>
@@ -16,7 +23,7 @@ const Error: React.FC = () => {
 					</Grid>
 				</Container>
 			</Flex>
-		</Layout>
+		</>
 	);
 };
 

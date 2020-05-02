@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import {jsx, Box, Image, Text, Link} from 'theme-ui';
-import Layout from '../components/layout';
+import {jsx, useThemeUI, Box, Image, Text, Link, ThemeProvider} from 'theme-ui';
+import Head from 'next/head';
 import Header from '../components/header';
 import {Twitter, GitHub, LinkedIn} from '../components/icons';
 import About from '../content/about.md';
@@ -15,9 +15,14 @@ const components = {
 };
 
 const Resume: React.FC = () => {
+	const {theme} = useThemeUI();
+
 	return (
-		<Layout components={components} title="Jonathan Haines - resume">
-			<Box p={[4, 8]}>
+		<>
+			<Head>
+				<title>Jonathan Haines - resume</title>
+			</Head>
+			<ThemeProvider components={components} theme={theme}>
 				<Box
 					bg="gray.7"
 					sx={{
@@ -31,8 +36,8 @@ const Resume: React.FC = () => {
 					<Nav />
 					<Main />
 				</Box>
-			</Box>
-		</Layout>
+			</ThemeProvider>
+		</>
 	);
 };
 

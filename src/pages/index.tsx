@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import {jsx, Flex, ThemeProvider} from 'theme-ui';
 import {FC} from 'react';
-import Layout from '../components/layout';
+import Head from 'next/head';
 import Home from '../content/home.md';
 
 const heading = {
 	fontSize: [4, 6],
-
 	p: [4, 8],
 	background: 'white',
 	fontWeight: 'bold'
@@ -21,12 +20,16 @@ const theme = {
 
 const Index: FC = () => {
 	return (
-		<Layout>
+		<>
+			<Head>
+				<title>Jonathan Haines</title>
+			</Head>
 			<ThemeProvider theme={theme}>
 				<Flex
 					sx={{
 						minHeight: '100%',
 						py: [20, 24],
+						mx: [-4, -8],
 						flexDirection: 'column',
 						justifyContent: 'space-between'
 					}}
@@ -34,7 +37,7 @@ const Index: FC = () => {
 					<Home />
 				</Flex>
 			</ThemeProvider>
-		</Layout>
+		</>
 	);
 };
 

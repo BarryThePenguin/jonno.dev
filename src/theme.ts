@@ -293,6 +293,9 @@ export default {
 		hr: {
 			my: 6
 		},
+		img: {
+			maxWidth: '100%'
+		},
 		pre: {
 			fontFamily: 'monospace',
 			overflowX: 'auto',
