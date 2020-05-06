@@ -34,7 +34,7 @@
     "micro-cors": "^0.1.1",
     "next": "^9.3.6",
     "next-offline": "^5.0.2",
-    "polished": "^3.6.0",
+    "polished": "^3.6.2",
     "prop-types": "^15.7.2",
     "puppeteer-core": "^2.1.1",
     "react": "^16.13.1",
