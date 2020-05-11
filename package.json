@@ -50,7 +50,7 @@
     "@next/mdx": "^9.3.6",
     "@styled-system/css": "^5.1.5",
     "@types/google.analytics": "0.0.40",
-    "@types/react": "^16.9.33",
+    "@types/react": "^16.9.35",
     "cssnano": "^4.1.10",
     "eslint-config-xo": "^0.29.1",
     "eslint-config-xo-react": "^0.23.0",
