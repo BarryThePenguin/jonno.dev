@@ -32,7 +32,7 @@
     "css-prefers-color-scheme": "^4.0.0",
     "emotion": "^10.0.27",
     "micro-cors": "^0.1.1",
-    "next": "^9.3.6",
+    "next": "^9.4.0",
     "next-offline": "^5.0.2",
     "polished": "^3.6.0",
     "prop-types": "^15.7.2",
