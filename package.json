@@ -45,7 +45,7 @@
     "typeface-eb-garamond": "^1.1.4"
   },
   "devDependencies": {
-    "@mdx-js/loader": "^1.6.1",
+    "@mdx-js/loader": "^1.6.4",
     "@next/bundle-analyzer": "^9.4.2",
     "@next/mdx": "^9.4.2",
     "@styled-system/css": "^5.1.5",
