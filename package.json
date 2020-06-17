@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.6.5",
-    "@next/bundle-analyzer": "^9.4.2",
+    "@next/bundle-analyzer": "^9.4.4",
     "@next/mdx": "^9.4.4",
     "@styled-system/css": "^5.1.5",
     "@types/google.analytics": "0.0.40",
