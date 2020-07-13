@@ -136,7 +136,7 @@ const sizes = {
 	container: '50%'
 };
 
-export default {
+const theme = {
 	borderWidths,
 	breakpoints: ['40em', '52em', '64em'],
 	space: {
@@ -322,3 +322,5 @@ export default {
 		}
 	}
 };
+
+export default theme;
