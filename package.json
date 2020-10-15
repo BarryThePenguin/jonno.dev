@@ -33,7 +33,7 @@
     "next-offline": "^5.0.2",
     "polished": "^3.6.7",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-dom": "^16.13.1",
     "remark-external-links": "^7.0.0",
     "remark-images": "^2.0.0",
