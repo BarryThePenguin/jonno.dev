@@ -1,9 +1,7 @@
-import React, {FC, HTMLProps} from 'react';
+import React, {FC} from 'react';
 import PropTypes from 'prop-types';
 import NextLink from 'next/link';
-import {Link as ThemeUILink} from 'theme-ui';
-
-type LinkProps = HTMLProps<HTMLAnchorElement>;
+import {Link as ThemeUILink, LinkProps} from 'theme-ui';
 
 const Link: FC<LinkProps> = ({href, ...props}) => {
 	const isApi = href.startsWith('/api/');
