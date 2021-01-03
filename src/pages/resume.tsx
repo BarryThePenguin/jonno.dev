@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import {jsx, useThemeUI, Box, Image, Text, Link, ThemeProvider} from 'theme-ui';
+import {MDXProvider} from '@mdx-js/react';
 import {NextSeo} from 'next-seo';
 import Header from '../components/header';
 import {Twitter, GitHub, LinkedIn} from '../components/icons';
@@ -20,20 +21,22 @@ const Resume: React.FC = () => {
 	return (
 		<>
 			<NextSeo title="Resume" />
-			<ThemeProvider components={components} theme={theme}>
-				<Box
-					bg="gray.7"
-					sx={{
-						border: 'solid',
-						borderWidth: 8,
-						borderColor: 'gray.8',
-						display: ['block', 'block', 'block', 'flex']
-					}}
-					className="dn-print-ba"
-				>
-					<Nav />
-					<Main />
-				</Box>
+			<ThemeProvider theme={theme}>
+				<MDXProvider components={components}>
+					<Box
+						bg="gray.7"
+						sx={{
+							border: 'solid',
+							borderWidth: 8,
+							borderColor: 'gray.8',
+							display: ['block', 'block', 'block', 'flex']
+						}}
+						className="dn-print-ba"
+					>
+						<Nav />
+						<Main />
+					</Box>
+				</MDXProvider>
 			</ThemeProvider>
 		</>
 	);

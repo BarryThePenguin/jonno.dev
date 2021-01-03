@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import {jsx, Box, ThemeProvider} from 'theme-ui';
+import {MDXProvider} from '@mdx-js/react';
 import {FC} from 'react';
 import PropTypes from 'prop-types';
 import {Global} from '@emotion/core';
@@ -88,22 +89,24 @@ const Layout: React.FC = ({children}) => (
 		</Head>
 		<Reset />
 		<Fonts />
-		<ThemeProvider theme={theme} components={components}>
-			<Box
-				p={[4, 8]}
-				sx={{
-					minHeight: '100%',
-					backgroundImage: `repeating-linear-gradient(
+		<ThemeProvider theme={theme}>
+			<MDXProvider components={components}>
+				<Box
+					p={[4, 8]}
+					sx={{
+						minHeight: '100%',
+						backgroundImage: `repeating-linear-gradient(
 				45deg,
 				${theme.colors.pink[4]},
 				${theme.colors.pink[4]} 10px,
 				${theme.colors.white} 10px,
 				${theme.colors.white} 20px
 			)`
-				}}
-			>
-				{children}
-			</Box>
+					}}
+				>
+					{children}
+				</Box>
+			</MDXProvider>
 		</ThemeProvider>
 		<Analytics />
 	</>

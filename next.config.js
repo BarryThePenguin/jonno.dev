@@ -17,6 +17,9 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig = {
 	pageExtensions: ['js', 'jsx', 'tsx', 'md', 'mdx'],
+	images: {
+		domains: ['s.gravatar.com']
+	},
 	target: 'serverless',
 	transformManifest: (manifest) => ['/'].concat(manifest), // Add the homepage to the cache
 	// Trying to set NODE_ENV=production when running yarn dev causes a build-time error so we
