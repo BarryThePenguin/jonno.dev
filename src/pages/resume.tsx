@@ -56,6 +56,8 @@ const Nav: React.FC = () => {
 				<Image
 					src="https://s.gravatar.com/avatar/c7cda18594e6e6c554f8f9872dd9acbb?s=300"
 					alt="profile image"
+					width="300px"
+					height="300px"
 					variant="avatar"
 					className="dn-print"
 				/>
