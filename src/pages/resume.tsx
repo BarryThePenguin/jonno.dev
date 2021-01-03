@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import {jsx, useThemeUI, Box, Image, Text, Link, ThemeProvider} from 'theme-ui';
-import Head from 'next/head';
+import {NextSeo} from 'next-seo';
 import Header from '../components/header';
 import {Twitter, GitHub, LinkedIn} from '../components/icons';
 import About from '../content/about.md';
@@ -19,9 +19,7 @@ const Resume: React.FC = () => {
 
 	return (
 		<>
-			<Head>
-				<title>Jonathan Haines - resume</title>
-			</Head>
+			<NextSeo title="Resume" />
 			<ThemeProvider components={components} theme={theme}>
 				<Box
 					bg="gray.7"

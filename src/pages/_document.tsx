@@ -20,10 +20,6 @@ class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					<meta
-						name="Description"
-						content="Jonathan Haines is software engineer who is passionate about building up new developers, improving experiences between people and technology, and web technologies."
-					/>
 					<link
 						type="text/plain"
 						rel="author"

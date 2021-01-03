@@ -1,14 +1,12 @@
 /** @jsx jsx */
 import {jsx, Flex, Grid, Heading, Container} from 'theme-ui';
-import Head from 'next/head';
+import {NextSeo} from 'next-seo';
 import Link from '../components/link';
 
 const Error: React.FC = () => {
 	return (
 		<>
-			<Head>
-				<title>Jonathan Haines - page not found</title>
-			</Head>
+			<NextSeo title="Page not found" />
 			<Flex
 				sx={{
 					flexDirection: 'column',

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import {jsx, Flex, ThemeProvider} from 'theme-ui';
 import {FC} from 'react';
-import Head from 'next/head';
+import {NextSeo} from 'next-seo';
 import Home from '../content/home.md';
 
 const heading = {
@@ -21,9 +21,7 @@ const theme = {
 const Index: FC = () => {
 	return (
 		<>
-			<Head>
-				<title>Jonathan Haines</title>
-			</Head>
+			<NextSeo title="👋🏻" />
 			<ThemeProvider theme={theme}>
 				<Flex
 					sx={{
