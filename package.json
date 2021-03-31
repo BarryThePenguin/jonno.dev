@@ -44,7 +44,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@mdx-js/loader": "^1.6.22",
-    "@next/bundle-analyzer": "^10.0.4",
+    "@next/bundle-analyzer": "^10.1.2",
     "@next/mdx": "^10.0.7",
     "@types/google.analytics": "0.0.41",
     "@types/mdx-js__react": "^1.5.3",
