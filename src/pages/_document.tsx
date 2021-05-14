@@ -43,16 +43,19 @@ class MyDocument extends Document {
 						href="/favicon-16x16.png"
 					/>
 					<link rel="manifest" href="/manifest.json" />
-					<link rel="preconnect" href="//www.google-analytics.com" />
-					<link rel="dns-prefetch" href="//www.google-analytics.com" />
+					<link rel="preconnect" href="//www.googletagmanager.com" />
+					<link rel="dns-prefetch" href="//www.googletagmanager.com" />
+					<script
+						async
+						src="https://www.googletagmanager.com/gtag/js?id=G-KMG51516QN"
+					/>
 					<script
 						// eslint-disable-next-line react/no-danger
 						dangerouslySetInnerHTML={{
 							__html:
-								'window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;'
+								'window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}'
 						}}
 					/>
-					<script async src="https://www.google-analytics.com/analytics.js" />
 				</Head>
 				<body>
 					<Main />
