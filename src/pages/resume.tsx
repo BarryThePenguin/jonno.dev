@@ -1,5 +1,7 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import {jsx, useThemeUI, Box, Image, Text, Link, ThemeProvider} from 'theme-ui';
+import {FC, Fragment} from 'react';
 import {MDXProvider} from '@mdx-js/react';
 import {NextSeo} from 'next-seo';
 import Header from '../components/header';
@@ -15,11 +17,11 @@ const components = {
 	h2: Header
 };
 
-const Resume: React.FC = () => {
+const Resume: FC = () => {
 	const {theme} = useThemeUI();
 
 	return (
-		<>
+		<Fragment>
 			<NextSeo title="Resume" />
 			<ThemeProvider theme={theme}>
 				<MDXProvider components={components}>
@@ -38,11 +40,11 @@ const Resume: React.FC = () => {
 					</Box>
 				</MDXProvider>
 			</ThemeProvider>
-		</>
+		</Fragment>
 	);
 };
 
-const Nav: React.FC = () => {
+const Nav: FC = () => {
 	return (
 		<Box
 			px={[4, 12]}
@@ -104,7 +106,7 @@ const Nav: React.FC = () => {
 	);
 };
 
-const Main: React.FC = () => {
+const Main: FC = () => {
 	return (
 		<Box
 			as="main"

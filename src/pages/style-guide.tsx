@@ -1,8 +1,10 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import {jsx, Heading, Grid} from 'theme-ui';
+import type {FC} from 'react';
 import {TypeScale, TypeStyle, ColorPalette} from '@theme-ui/style-guide';
 
-const Index: React.FC = () => {
+const Index: FC = () => {
 	return (
 		<Grid
 			columns={1}

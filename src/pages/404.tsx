@@ -1,11 +1,13 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import {jsx, Flex, Grid, Heading, Container} from 'theme-ui';
+import {FC, Fragment} from 'react';
 import {NextSeo} from 'next-seo';
 import Link from '../components/link';
 
-const Error: React.FC = () => {
+const Error: FC = () => {
 	return (
-		<>
+		<Fragment>
 			<NextSeo title="Page not found" />
 			<Flex
 				sx={{
@@ -21,7 +23,7 @@ const Error: React.FC = () => {
 					</Grid>
 				</Container>
 			</Flex>
-		</>
+		</Fragment>
 	);
 };
 

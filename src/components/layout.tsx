@@ -1,7 +1,8 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import {jsx, Box, ThemeProvider} from 'theme-ui';
 import {MDXProvider} from '@mdx-js/react';
-import {FC} from 'react';
+import {Fragment, FC} from 'react';
 import PropTypes from 'prop-types';
 import {Global} from '@emotion/core';
 import Head from 'next/head';
@@ -28,7 +29,7 @@ const Reset: FC = () => (
 );
 
 const Fonts: FC = () => (
-	<>
+	<Fragment>
 		<Global
 			styles={fontFace({
 				fontDisplay: 'swap',
@@ -47,7 +48,7 @@ const Fonts: FC = () => (
 				fontWeight: 'bold'
 			})}
 		/>
-	</>
+	</Fragment>
 );
 
 type WrapperProps = {
@@ -82,8 +83,8 @@ const components = {
 	wrapper: Wrapper
 };
 
-const Layout: React.FC = ({children}) => (
-	<>
+const Layout: FC = ({children}) => (
+	<Fragment>
 		<Head>
 			<meta name="theme-color" content={theme.colors.primary} />
 		</Head>
@@ -109,7 +110,7 @@ const Layout: React.FC = ({children}) => (
 			</MDXProvider>
 		</ThemeProvider>
 		<Analytics />
-	</>
+	</Fragment>
 );
 
 Layout.propTypes = {
