@@ -1,7 +1,6 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx, Heading} from 'theme-ui';
-import type {FC} from 'react';
+/** @jsxImportSource theme-ui */
+import {Heading} from 'theme-ui';
+import {FC} from 'react';
 import PropTypes from 'prop-types';
 
 const Header: FC = ({children}) => (

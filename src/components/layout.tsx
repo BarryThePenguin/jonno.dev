@@ -1,10 +1,8 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx, Box, ThemeProvider} from 'theme-ui';
-import {MDXProvider} from '@mdx-js/react';
-import {Fragment, FC} from 'react';
+/** @jsxImportSource theme-ui */
+import {Box, ThemeProvider} from 'theme-ui';
+import {FC} from 'react';
 import PropTypes from 'prop-types';
-import {Global} from '@emotion/core';
+import {Global} from '@emotion/react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import {fontFace} from 'polished';
@@ -29,7 +27,7 @@ const Reset: FC = () => (
 );
 
 const Fonts: FC = () => (
-	<Fragment>
+	<>
 		<Global
 			styles={fontFace({
 				fontDisplay: 'swap',
@@ -48,7 +46,7 @@ const Fonts: FC = () => (
 				fontWeight: 'bold'
 			})}
 		/>
-	</Fragment>
+	</>
 );
 
 type WrapperProps = {
@@ -84,33 +82,31 @@ const components = {
 };
 
 const Layout: FC = ({children}) => (
-	<Fragment>
+	<>
 		<Head>
 			<meta name="theme-color" content={theme.colors.primary} />
 		</Head>
 		<Reset />
 		<Fonts />
-		<ThemeProvider theme={theme}>
-			<MDXProvider components={components}>
-				<Box
-					p={[4, 8]}
-					sx={{
-						minHeight: '100%',
-						backgroundImage: `repeating-linear-gradient(
-				45deg,
-				${theme.colors.pink[4]},
-				${theme.colors.pink[4]} 10px,
-				${theme.colors.white} 10px,
-				${theme.colors.white} 20px
-			)`
-					}}
-				>
-					{children}
-				</Box>
-			</MDXProvider>
+		<ThemeProvider theme={theme} components={components}>
+			<Box
+				p={[4, 8]}
+				sx={{
+					minHeight: '100%',
+					backgroundImage: `repeating-linear-gradient(
+			45deg,
+			${theme.colors.pink[4]},
+			${theme.colors.pink[4]} 10px,
+			${theme.colors.white} 10px,
+			${theme.colors.white} 20px
+		)`
+				}}
+			>
+				{children}
+			</Box>
 		</ThemeProvider>
 		<Analytics />
-	</Fragment>
+	</>
 );
 
 Layout.propTypes = {

@@ -1,3 +1,7 @@
+import {Theme} from 'theme-ui';
+
+const makeTheme = <T extends Theme>(t: T) => t;
+
 const borderWidths = {
 	px: '1px',
 	'0': '0',
@@ -136,7 +140,7 @@ const sizes = {
 	container: '50%'
 };
 
-const theme = {
+const theme = makeTheme({
 	borderWidths,
 	breakpoints: ['40em', '52em', '64em'],
 	space: {
@@ -321,6 +325,6 @@ const theme = {
 			borderBottomStyle: 'solid'
 		}
 	}
-};
+});
 
 export default theme;

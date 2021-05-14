@@ -23,12 +23,9 @@
   },
   "keywords": [],
   "dependencies": {
-    "@emotion/core": "^10.1.1",
-    "@mdx-js/react": "^1.6.22",
-    "@theme-ui/color": "^0.3.5",
-    "@theme-ui/style-guide": "^0.3.5",
+    "@emotion/react": "^11.4.0",
+    "@theme-ui/style-guide": "^0.8.4",
     "autotrack": "^2.4.1",
-    "emotion": "^10.0.27",
     "next": "^10.2.0",
     "next-offline": "^5.0.5",
     "next-seo": "^4.24.0",
@@ -38,7 +35,7 @@
     "react-dom": "^17.0.2",
     "remark-external-links": "^8.0.0",
     "remark-images": "^2.0.0",
-    "theme-ui": "^0.3.5",
+    "theme-ui": "^0.8.4",
     "typeface-eb-garamond": "^1.1.13"
   },
   "devDependencies": {
@@ -49,7 +46,6 @@
     "@types/google.analytics": "0.0.41",
     "@types/mdx-js__react": "^1.5.3",
     "@types/react": "^17.0.5",
-    "@types/theme-ui": "^0.3.7",
     "eslint-config-xo-react": "^0.25.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
@@ -66,10 +62,8 @@
       "xo-react"
     ],
     "rules": {
-      "react/jsx-fragments": [
-        "error",
-        "element"
-      ]
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off"
     }
   }
 }

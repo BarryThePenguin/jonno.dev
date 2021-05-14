@@ -1,6 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx, Heading, Grid} from 'theme-ui';
+import {Heading, Grid} from 'theme-ui';
 import type {FC} from 'react';
 import {TypeScale, TypeStyle, ColorPalette} from '@theme-ui/style-guide';
 

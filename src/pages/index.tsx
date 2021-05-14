@@ -1,7 +1,6 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx, Flex, ThemeProvider} from 'theme-ui';
-import {Fragment, FC} from 'react';
+/** @jsxImportSource theme-ui */
+import {Flex, ThemeProvider} from 'theme-ui';
+import {FC} from 'react';
 import {NextSeo} from 'next-seo';
 import Home from '../content/home.md';
 
@@ -21,7 +20,7 @@ const theme = {
 
 const Index: FC = () => {
 	return (
-		<Fragment>
+		<>
 			<NextSeo title="👋🏻" />
 			<ThemeProvider theme={theme}>
 				<Flex
@@ -36,7 +35,7 @@ const Index: FC = () => {
 					<Home />
 				</Flex>
 			</ThemeProvider>
-		</Fragment>
+		</>
 	);
 };
 
