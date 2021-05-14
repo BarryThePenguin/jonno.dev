@@ -25,7 +25,7 @@
   "dependencies": {
     "@emotion/core": "^10.1.1",
     "@mdx-js/react": "^1.6.22",
-    "@theme-ui/color": "^0.3.5",
+    "@theme-ui/color": "^0.8.4",
     "@theme-ui/style-guide": "^0.3.5",
     "autotrack": "^2.4.1",
     "emotion": "^10.0.27",
