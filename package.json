@@ -24,7 +24,7 @@
   "keywords": [],
   "dependencies": {
     "@emotion/react": "^11.4.0",
-    "@theme-ui/style-guide": "^0.8.4",
+    "@theme-ui/style-guide": "^0.10.0",
     "next": "^10.2.0",
     "next-offline": "^5.0.5",
     "next-seo": "^4.24.0",
