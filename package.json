@@ -24,7 +24,7 @@
   "keywords": [],
   "dependencies": {
     "@emotion/react": "^11.4.0",
-    "@theme-ui/style-guide": "^0.8.4",
+    "@theme-ui/style-guide": "^0.10.0",
     "next": "^10.2.0",
     "next-offline": "^5.0.5",
     "next-seo": "^4.24.0",
@@ -38,12 +38,12 @@
     "typeface-eb-garamond": "^1.1.13"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.2",
+    "@babel/core": "^7.14.6",
     "@mdx-js/loader": "^1.6.22",
     "@next/bundle-analyzer": "^10.2.0",
     "@next/mdx": "^10.2.0",
     "@types/gtag.js": "^0.0.4",
-    "@types/react": "^17.0.5",
+    "@types/react": "^17.0.11",
     "eslint-config-xo-react": "^0.25.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
