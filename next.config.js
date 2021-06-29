@@ -16,9 +16,6 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 const nextConfig = {
-	future: {
-		webpack5: true
-	},
 	pageExtensions: ['js', 'jsx', 'tsx', 'md', 'mdx'],
 	images: {
 		domains: ['s.gravatar.com']
