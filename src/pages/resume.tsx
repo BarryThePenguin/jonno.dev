@@ -1,5 +1,6 @@
 /** @jsxImportSource theme-ui */
-import {useThemeUI, Box, Image, Text, Link, ThemeProvider} from 'theme-ui';
+import NextImage from 'next/image';
+import {useThemeUI, Box, Text, Link, ThemeProvider} from 'theme-ui';
 import {FC} from 'react';
 import {NextSeo} from 'next-seo';
 import Header from '../components/header';
@@ -10,6 +11,7 @@ import Work from '../content/work.md';
 import Volunteer from '../content/volunteer.md';
 import Education from '../content/education.md';
 import Interests from '../content/interests.md';
+import jonnoPic from '../../public/jonno.jpg';
 
 const components = {
 	h2: Header
@@ -51,14 +53,18 @@ const Nav: FC = () => {
 			}}
 		>
 			<nav>
-				<Image
-					src="https://s.gravatar.com/avatar/c7cda18594e6e6c554f8f9872dd9acbb?s=300"
-					alt="profile image"
-					width="300px"
-					height="300px"
-					variant="avatar"
+				<div
+					sx={{
+						display: 'inline-block',
+						variant: 'images.avatar',
+						overflow: 'hidden',
+						width: '300px',
+						height: '300px'
+					}}
 					className="dn-print"
-				/>
+				>
+					<NextImage src={jonnoPic} alt="profile image" />
+				</div>
 				<Text as="h1" variant="hero">
 					Jonathan Haines
 					<small
