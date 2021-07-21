@@ -38,7 +38,7 @@
     "typeface-eb-garamond": "^1.1.13"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
+    "@babel/core": "^7.14.8",
     "@mdx-js/loader": "^1.6.22",
     "@next/bundle-analyzer": "^11.0.1",
     "@next/eslint-plugin-next": "^11.0.1",
