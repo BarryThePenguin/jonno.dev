@@ -38,19 +38,19 @@
     "typeface-eb-garamond": "^1.1.13"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.0",
+    "@babel/core": "^7.16.0",
     "@mdx-js/loader": "^1.6.22",
     "@next/bundle-analyzer": "^11.0.1",
     "@next/eslint-plugin-next": "^11.0.1",
-    "@next/mdx": "^11.0.1",
+    "@next/mdx": "^12.0.1",
     "@types/gtag.js": "^0.0.7",
     "@types/react": "^17.0.21",
     "eslint-config-xo-react": "^0.25.0",
-    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.4.1",
     "prettier-plugin-package": "^1.3.0",
-    "rollup": "^2.56.3",
+    "rollup": "^2.58.3",
     "typescript": "^4.4.4",
     "xo": "^0.39.0"
   },
