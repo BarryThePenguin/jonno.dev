@@ -1,8 +1,8 @@
-const bundleAnalyzer = require('@next/bundle-analyzer');
-const withOffline = require('next-offline');
-const nextMDX = require('@next/mdx');
-const images = require('remark-images');
-const externalLinks = require('remark-external-links');
+import bundleAnalyzer from '@next/bundle-analyzer';
+import withOffline from 'next-offline';
+import nextMDX from '@next/mdx';
+import images from 'remark-images';
+import externalLinks from 'remark-external-links';
 
 const withMDX = nextMDX({
 	extension: /\.mdx?$/,
@@ -20,7 +20,6 @@ const nextConfig = {
 	images: {
 		domains: ['s.gravatar.com']
 	},
-	target: 'serverless',
 	transformManifest: (manifest) => ['/'].concat(manifest), // Add the homepage to the cache
 	// Trying to set NODE_ENV=production when running yarn dev causes a build-time error so we
 	// turn on the SW in dev mode so that we can actually test it
@@ -47,4 +46,4 @@ const nextConfig = {
 	}
 };
 
-module.exports = withBundleAnalyzer(withMDX(withOffline(nextConfig)));
+export default withBundleAnalyzer(withMDX(withOffline(nextConfig)));
