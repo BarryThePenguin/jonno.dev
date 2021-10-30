@@ -1,9 +1,8 @@
-import React, {FC} from 'react';
 import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 import {Link as ThemeUILink, LinkProps} from 'theme-ui';
 
-const Link: FC<LinkProps> = ({href, ...props}) => {
+const Link = ({href, ...props}: LinkProps) => {
 	const isApi = href.startsWith('/api/');
 
 	if (isApi || props.target === '_blank') {

@@ -1,8 +1,7 @@
 import {Heading, Grid} from 'theme-ui';
-import type {FC} from 'react';
 import {TypeScale, TypeStyle, ColorPalette} from '@theme-ui/style-guide';
 
-const Index: FC = () => {
+const Index = () => {
 	return (
 		<Grid
 			columns={1}

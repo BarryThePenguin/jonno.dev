@@ -1,13 +1,12 @@
 import '../css/site.css';
 import '../css/print.css';
 
-import React, {FC} from 'react';
 import PropTypes from 'prop-types';
 import {AppProps} from 'next/app';
 import {DefaultSeo} from 'next-seo';
 import Layout from '../components/layout';
 
-const MyApp: FC<AppProps> = ({Component, pageProps}) => {
+const MyApp = ({Component, pageProps}: AppProps) => {
 	return (
 		<Layout>
 			<DefaultSeo

@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
 import {Flex, ThemeProvider} from 'theme-ui';
-import {FC} from 'react';
 import {NextSeo} from 'next-seo';
 import Home from '../content/home.md';
 
@@ -18,7 +17,7 @@ const theme = {
 	}
 };
 
-const Index: FC = () => {
+const Index = () => {
 	return (
 		<>
 			<NextSeo title="👋🏻" />

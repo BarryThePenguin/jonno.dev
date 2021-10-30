@@ -1,7 +1,6 @@
 /** @jsxImportSource theme-ui */
 import NextImage from 'next/image';
 import {useThemeUI, Box, Text, Link, ThemeProvider} from 'theme-ui';
-import {FC} from 'react';
 import {NextSeo} from 'next-seo';
 import Header from '../components/header';
 import {Twitter, GitHub, LinkedIn} from '../components/icons';
@@ -17,7 +16,7 @@ const components = {
 	h2: Header
 };
 
-const Resume: FC = () => {
+const Resume = () => {
 	const {theme} = useThemeUI();
 
 	return (
@@ -42,7 +41,7 @@ const Resume: FC = () => {
 	);
 };
 
-const Nav: FC = () => {
+const Nav = () => {
 	return (
 		<Box
 			px={[4, 12]}
@@ -108,7 +107,7 @@ const Nav: FC = () => {
 	);
 };
 
-const Main: FC = () => {
+const Main = () => {
 	return (
 		<Box
 			as="main"

@@ -1,4 +1,3 @@
-import React from 'react';
 import Document, {
 	Html,
 	Head,
@@ -16,7 +15,7 @@ class MyDocument extends Document {
 		return {...initialProps};
 	}
 
-	render(): JSX.Element {
+	render() {
 		return (
 			<Html lang="en">
 				<Head>
@@ -45,17 +44,6 @@ class MyDocument extends Document {
 					<link rel="manifest" href="/manifest.json" />
 					<link rel="preconnect" href="//www.googletagmanager.com" />
 					<link rel="dns-prefetch" href="//www.googletagmanager.com" />
-					<script
-						async
-						src="https://www.googletagmanager.com/gtag/js?id=G-KMG51516QN"
-					/>
-					<script
-						// eslint-disable-next-line react/no-danger
-						dangerouslySetInnerHTML={{
-							__html:
-								'window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}'
-						}}
-					/>
 				</Head>
 				<body>
 					<Main />

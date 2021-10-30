@@ -1,10 +1,9 @@
 /** @jsxImportSource theme-ui */
 import {Flex, Grid, Heading, Container} from 'theme-ui';
-import {FC} from 'react';
 import {NextSeo} from 'next-seo';
 import Link from '../components/link';
 
-const Error: FC = () => {
+const Error = () => {
 	return (
 		<>
 			<NextSeo title="Page not found" />

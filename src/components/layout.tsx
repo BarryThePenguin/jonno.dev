@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import {Box, ThemeProvider} from 'theme-ui';
-import {FC, useEffect} from 'react';
+import Script from 'next/script';
 import PropTypes from 'prop-types';
 import {Global} from '@emotion/react';
 import Head from 'next/head';
@@ -8,7 +8,7 @@ import {fontFace} from 'polished';
 import theme from '../theme';
 import Link from './link';
 
-const Reset: FC = () => (
+const Reset = () => (
 	<Global
 		styles={{
 			'html, body, #__next': {
@@ -21,7 +21,7 @@ const Reset: FC = () => (
 	/>
 );
 
-const Fonts: FC = () => (
+const Fonts = () => (
 	<>
 		<Global
 			styles={fontFace({
@@ -48,7 +48,7 @@ type WrapperProps = {
 	background?: string;
 };
 
-const Wrapper: FC<WrapperProps> = ({background, ...props}) => {
+const Wrapper = ({background, ...props}: WrapperProps) => {
 	if (background) {
 		return (
 			<Box
@@ -76,17 +76,24 @@ const components = {
 	wrapper: Wrapper
 };
 
-const Layout: FC = ({children}) => {
-	useEffect(() => {
-		gtag('js', new Date());
-		gtag('config', 'G-KMG51516QN');
-	}, []);
-
+const Layout = ({children}) => {
 	return (
 		<>
 			<Head>
 				<meta name="theme-color" content={theme.colors.primary} />
 			</Head>
+			<Script
+				strategy="afterInteractive"
+				src="https://www.googletagmanager.com/gtag/js?id=G-KMG51516QN"
+			/>
+			<Script id="google-analytics" strategy="afterInteractive">
+				{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-KMG51516QN');
+				`}
+			</Script>
 			<Reset />
 			<Fonts />
 			<ThemeProvider theme={theme} components={components}>

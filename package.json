@@ -59,11 +59,8 @@
     "prettier": true,
     "extends": [
       "xo-react",
+      "plugin:react/jsx-runtime",
       "plugin:@next/next/recommended"
-    ],
-    "rules": {
-      "react/jsx-uses-react": "off",
-      "react/react-in-jsx-scope": "off"
-    }
+    ]
   }
 }
