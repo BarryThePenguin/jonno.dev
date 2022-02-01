@@ -41,7 +41,7 @@
     "@babel/core": "^7.16.7",
     "@mdx-js/loader": "^1.6.22",
     "@next/bundle-analyzer": "^12.0.8",
-    "@next/eslint-plugin-next": "^12.0.3",
+    "@next/eslint-plugin-next": "^12.0.10",
     "@next/mdx": "^12.0.8",
     "@types/gtag.js": "^0.0.8",
     "@types/react": "^17.0.38",
