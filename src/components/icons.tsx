@@ -1,5 +1,3 @@
-/** @jsxImportSource theme-ui */
-
 export function Twitter() {
 	return (
 		<svg

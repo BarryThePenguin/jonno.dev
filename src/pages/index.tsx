@@ -1,4 +1,3 @@
-/** @jsxImportSource theme-ui */
 import {Flex, ThemeProvider} from 'theme-ui';
 import {NextSeo} from 'next-seo';
 import Home from '../content/home.md';

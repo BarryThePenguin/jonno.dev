@@ -1,6 +1,5 @@
-/** @jsxImportSource theme-ui */
-import {Box, ThemeProvider} from 'theme-ui';
 import Script from 'next/script';
+import {Box, ThemeProvider} from 'theme-ui';
 import PropTypes from 'prop-types';
 import {Global} from '@emotion/react';
 import Head from 'next/head';
