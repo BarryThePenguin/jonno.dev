@@ -13,10 +13,10 @@ import Interests from '../content/interests.md';
 import jonnoPic from '../../public/jonno.jpg';
 
 const components = {
-	h2: Header
+	h2: Header,
 };
 
-const Resume = () => {
+function Resume() {
 	const {theme} = useThemeUI();
 
 	return (
@@ -29,7 +29,7 @@ const Resume = () => {
 						border: 'solid',
 						borderWidth: 8,
 						borderColor: 'gray.8',
-						display: ['block', 'block', 'block', 'flex']
+						display: ['block', 'block', 'block', 'flex'],
 					}}
 					className="dn-print-ba"
 				>
@@ -39,16 +39,16 @@ const Resume = () => {
 			</ThemeProvider>
 		</>
 	);
-};
+}
 
-const Nav = () => {
+function Nav() {
 	return (
 		<Box
 			px={[4, 12]}
 			sx={{
 				width: ['full', 'full', 'full', '1/3'],
 				textAlign: 'center',
-				boxShadow: ['', '', '', 'inset -10px 0px 5px -5px rgba(0,0,0,0.75)']
+				boxShadow: ['', '', '', 'inset -10px 0px 5px -5px rgba(0,0,0,0.75)'],
 			}}
 		>
 			<nav>
@@ -58,7 +58,7 @@ const Nav = () => {
 						variant: 'images.avatar',
 						overflow: 'hidden',
 						width: '300px',
-						height: '300px'
+						height: '300px',
 					}}
 					className="dn-print"
 				>
@@ -68,7 +68,7 @@ const Nav = () => {
 					Jonathan Haines
 					<small
 						sx={{
-							display: 'block'
+							display: 'block',
 						}}
 					>
 						Web Technology Consultant
@@ -105,9 +105,9 @@ const Nav = () => {
 			</nav>
 		</Box>
 	);
-};
+}
 
-const Main = () => {
+function Main() {
 	return (
 		<Box
 			as="main"
@@ -116,7 +116,7 @@ const Main = () => {
 			px={[4, 8]}
 			backgroundColor="white"
 			sx={{
-				width: ['full', 'full', 'full', '2/3']
+				width: ['full', 'full', 'full', '2/3'],
 			}}
 		>
 			<article className="career">
@@ -139,6 +139,6 @@ const Main = () => {
 			</article>
 		</Box>
 	);
-};
+}
 
 export default Resume;

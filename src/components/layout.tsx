@@ -8,47 +8,51 @@ import {fontFace} from 'polished';
 import theme from '../theme';
 import Link from './link';
 
-const Reset = () => (
-	<Global
-		styles={{
-			'html, body, #__next': {
-				height: '100%'
-			},
-			svg: {
-				fill: 'currentColor'
-			}
-		}}
-	/>
-);
+function Reset() {
+	return (
+		<Global
+			styles={{
+				'html, body, #__next': {
+					height: '100%',
+				},
+				svg: {
+					fill: 'currentColor',
+				},
+			}}
+		/>
+	);
+}
 
-const Fonts = () => (
-	<>
-		<Global
-			styles={fontFace({
-				fontDisplay: 'swap',
-				fontFamily: 'EB Garamond',
-				fontFilePath: '/static/fonts/eb-garamond-latin-400',
-				fileFormats: ['woff', 'woff2'],
-				fontWeight: 'regular'
-			})}
-		/>
-		<Global
-			styles={fontFace({
-				fontDisplay: 'swap',
-				fontFamily: 'EB Garamond',
-				fontFilePath: '/static/fonts/eb-garamond-latin-700',
-				fileFormats: ['woff', 'woff2'],
-				fontWeight: 'bold'
-			})}
-		/>
-	</>
-);
+function Fonts() {
+	return (
+		<>
+			<Global
+				styles={fontFace({
+					fontDisplay: 'swap',
+					fontFamily: 'EB Garamond',
+					fontFilePath: '/static/fonts/eb-garamond-latin-400',
+					fileFormats: ['woff', 'woff2'],
+					fontWeight: 'regular',
+				})}
+			/>
+			<Global
+				styles={fontFace({
+					fontDisplay: 'swap',
+					fontFamily: 'EB Garamond',
+					fontFilePath: '/static/fonts/eb-garamond-latin-700',
+					fileFormats: ['woff', 'woff2'],
+					fontWeight: 'bold',
+				})}
+			/>
+		</>
+	);
+}
 
 type WrapperProps = {
 	background?: string;
 };
 
-const Wrapper = ({background, ...props}: WrapperProps) => {
+function Wrapper({background, ...props}: WrapperProps) {
 	if (background) {
 		return (
 			<Box
@@ -57,7 +61,7 @@ const Wrapper = ({background, ...props}: WrapperProps) => {
 				sx={{
 					border: 'solid',
 					borderWidth: 8,
-					borderColor: 'gray.8'
+					borderColor: 'gray.8',
 				}}
 				{...props}
 			/>
@@ -65,18 +69,18 @@ const Wrapper = ({background, ...props}: WrapperProps) => {
 	}
 
 	return <Box {...props} />;
-};
+}
 
 Wrapper.propTypes = {
-	background: PropTypes.string
+	background: PropTypes.string,
 };
 
 const components = {
 	a: Link,
-	wrapper: Wrapper
+	wrapper: Wrapper,
 };
 
-const Layout = ({children}) => {
+function Layout({children}) {
 	return (
 		<>
 			<Head>
@@ -107,7 +111,7 @@ const Layout = ({children}) => {
 			${theme.colors.pink[4]} 10px,
 			${theme.colors.white} 10px,
 			${theme.colors.white} 20px
-		)`
+		)`,
 					}}
 				>
 					{children}
@@ -115,10 +119,10 @@ const Layout = ({children}) => {
 			</ThemeProvider>
 		</>
 	);
-};
+}
 
 Layout.propTypes = {
-	children: PropTypes.node.isRequired
+	children: PropTypes.node.isRequired,
 };
 
 export default Layout;

@@ -3,7 +3,7 @@ import {Flex, Grid, Heading, Container} from 'theme-ui';
 import {NextSeo} from 'next-seo';
 import Link from '../components/link';
 
-const Error = () => {
+function Error() {
 	return (
 		<>
 			<NextSeo title="Page not found" />
@@ -11,7 +11,7 @@ const Error = () => {
 				sx={{
 					flexDirection: 'column',
 					justifyItems: 'center',
-					alignContent: 'center'
+					alignContent: 'center',
 				}}
 			>
 				<Container bg="white" p={4}>
@@ -23,6 +23,6 @@ const Error = () => {
 			</Flex>
 		</>
 	);
-};
+}
 
 export default Error;
