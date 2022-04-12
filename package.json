@@ -27,7 +27,7 @@
     "@theme-ui/style-guide": "^0.14.2",
     "next": "^12.1.4",
     "next-offline": "^5.0.5",
-    "next-seo": "^4.28.1",
+    "next-seo": "^5.4.0",
     "polished": "^4.1.3",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
