@@ -21,7 +21,7 @@ const baseColours = {
 	white: '#fff',
 	// Blue hsl(210, 100%, 67%)
 	blue: [
-		null,
+		'',
 		'#d0e8ff',
 		'#a1d0ff',
 		'#70b7ff',
@@ -36,7 +36,7 @@ const baseColours = {
 
 	// Pink hsl(330, 100%, 67%)
 	pink: [
-		null,
+		'',
 		'#ffdbed',
 		'#ffb6db',
 		'#ff8fc7',
@@ -51,7 +51,7 @@ const baseColours = {
 
 	// Green hsl(90, 100%, 67%)
 	green: [
-		null,
+		'',
 		'#a9ff52',
 		'#76ec00',
 		'#69d300',
@@ -65,7 +65,7 @@ const baseColours = {
 	],
 
 	gray: [
-		null,
+		'',
 		'#f7fafc',
 		'#edf2f7',
 		'#e2e8f0',
