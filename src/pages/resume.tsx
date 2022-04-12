@@ -1,4 +1,3 @@
-/** @jsxImportSource theme-ui */
 import NextImage from 'next/image';
 import {useThemeUI, Box, Text, Link, ThemeProvider} from 'theme-ui';
 import {NextSeo} from 'next-seo';
