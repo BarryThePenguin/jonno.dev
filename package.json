@@ -56,11 +56,17 @@
   },
   "xo": {
     "envs": "browser",
+    "nodeVersion": "14",
     "prettier": true,
     "extends": [
       "xo-react",
       "plugin:react/jsx-runtime",
       "plugin:@next/next/recommended"
-    ]
+    ],
+    "rules": {
+      "import/extensions": "off",
+      "node/prefer-global/process": "off",
+      "@typescript-eslint/triple-slash-reference": "off"
+    }
   }
 }

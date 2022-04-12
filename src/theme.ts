@@ -7,13 +7,13 @@ const borderWidths = {
 	'0': '0',
 	'2': '2px',
 	'4': '4px',
-	'8': '8px'
+	'8': '8px',
 };
 
 const heading = {
 	fontFamily: 'heading',
 	lineHeight: 'heading',
-	fontWeight: 'heading'
+	fontWeight: 'heading',
 };
 
 // https://gka.github.io/palettes/
@@ -31,7 +31,7 @@ const baseColours = {
 		'#0054a9',
 		'#003f7f',
 		'#002d59',
-		'#001a35'
+		'#001a35',
 	],
 
 	// Pink hsl(330, 100%, 67%)
@@ -46,7 +46,7 @@ const baseColours = {
 		'#aa0055',
 		'#820041',
 		'#5d002f',
-		'#3a001d'
+		'#3a001d',
 	],
 
 	// Green hsl(90, 100%, 67%)
@@ -61,7 +61,7 @@ const baseColours = {
 		'#3a7400',
 		'#2f5e00',
 		'#254900',
-		'#1a3500'
+		'#1a3500',
 	],
 
 	gray: [
@@ -74,8 +74,8 @@ const baseColours = {
 		'#718096',
 		'#4a5568',
 		'#2d3748',
-		'#1a202c'
-	]
+		'#1a202c',
+	],
 };
 
 const sizes = {
@@ -137,7 +137,7 @@ const sizes = {
 	full: '100%',
 	screenHeight: '100vh',
 	screenWidth: '100vw',
-	container: '50%'
+	container: '50%',
 };
 
 const theme = makeTheme({
@@ -162,23 +162,23 @@ const theme = makeTheme({
 		40: '10rem',
 		48: '12rem',
 		56: '14rem',
-		64: '16rem'
+		64: '16rem',
 	},
 	fonts: {
 		body: '"EB Garamond", serif',
 		heading:
 			'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-		monospace: 'Menlo, monospace'
+		monospace: 'Menlo, monospace',
 	},
 	fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
 	fontWeights: {
 		body: 400,
 		heading: 400,
-		bold: 700
+		bold: 700,
 	},
 	lineHeights: {
 		body: 1.5,
-		heading: 2
+		heading: 2,
 	},
 	colors: {
 		...baseColours,
@@ -187,7 +187,7 @@ const theme = makeTheme({
 		primary: baseColours.blue[4],
 		primaryHover: baseColours.blue[5],
 		secondary: baseColours.gray[6],
-		headingDark: baseColours.blue[7]
+		headingDark: baseColours.blue[7],
 	},
 	sizes,
 	images: {
@@ -196,9 +196,9 @@ const theme = makeTheme({
 			my: '8',
 			border: 'solid',
 			borderWidth: 8,
-			borderRadius: 99999,
-			borderColor: baseColours.gray[1]
-		}
+			borderRadius: 99_999,
+			borderColor: baseColours.gray[1],
+		},
 	},
 	text: {
 		hero: {
@@ -206,7 +206,7 @@ const theme = makeTheme({
 			fontSize: 6,
 			color: 'white',
 			fontFamily: 'heading',
-			fontWeight: 'body'
+			fontWeight: 'body',
 		},
 		banner: {
 			position: 'relative',
@@ -227,9 +227,9 @@ const theme = makeTheme({
 				top: '100%',
 				borderStyle: 'solid',
 				borderColor: `${baseColours.blue[7]} ${baseColours.blue[7]} transparent transparent`,
-				borderWidth: ['0.25rem 0.5rem', '0.5rem 1rem']
-			}
-		}
+				borderWidth: ['0.25rem 0.5rem', '0.5rem 1rem'],
+			},
+		},
 	},
 	links: {
 		social: {
@@ -237,17 +237,17 @@ const theme = makeTheme({
 			textDecoration: 'none',
 			'&:active': {
 				color: 'green.2',
-				textDecoration: 'none'
+				textDecoration: 'none',
 			},
 			'&:focus': {
 				color: 'green.2',
-				textDecoration: 'none'
+				textDecoration: 'none',
 			},
 			'&:hover': {
 				color: 'green.2',
-				textDecoration: 'none'
-			}
-		}
+				textDecoration: 'none',
+			},
+		},
 	},
 	styles: {
 		root: {
@@ -255,76 +255,76 @@ const theme = makeTheme({
 			fontSize: 3,
 			fontFamily: 'body',
 			lineHeight: 'body',
-			fontWeight: 'body'
+			fontWeight: 'body',
 		},
 		a: {
 			color: 'secondary',
 			transition: 'color .15s ease-in',
 			':active': {
-				color: 'primaryHover'
+				color: 'primaryHover',
 			},
 			':focus': {
-				color: 'primaryHover'
+				color: 'primaryHover',
 			},
 			':hover': {
-				color: 'primaryHover'
-			}
+				color: 'primaryHover',
+			},
 		},
 		h1: {
 			...heading,
-			fontSize: 5
+			fontSize: 5,
 		},
 		h2: {
 			...heading,
-			fontSize: 4
+			fontSize: 4,
 		},
 		h3: {
 			...heading,
-			fontSize: 3
+			fontSize: 3,
 		},
 		h4: {
 			...heading,
-			fontSize: 2
+			fontSize: 2,
 		},
 		h5: {
 			...heading,
-			fontSize: 1
+			fontSize: 1,
 		},
 		h6: {
 			...heading,
-			fontSize: 0
+			fontSize: 0,
 		},
 		hr: {
-			my: 6
+			my: 6,
 		},
 		img: {
-			maxWidth: '100%'
+			maxWidth: '100%',
 		},
 		pre: {
 			fontFamily: 'monospace',
 			overflowX: 'auto',
 			code: {
-				color: 'inherit'
-			}
+				color: 'inherit',
+			},
 		},
 		code: {
 			fontFamily: 'monospace',
-			fontSize: 'inherit'
+			fontSize: 'inherit',
 		},
 		table: {
 			width: '100%',
 			borderCollapse: 'separate',
-			borderSpacing: 0
+			borderSpacing: 0,
 		},
 		th: {
 			textAlign: 'left',
-			borderBottomStyle: 'solid'
+			borderBottomStyle: 'solid',
 		},
 		td: {
 			textAlign: 'left',
-			borderBottomStyle: 'solid'
-		}
-	}
+			borderBottomStyle: 'solid',
+		},
+	},
 });
 
 export default theme;

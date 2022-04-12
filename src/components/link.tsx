@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 import {Link as ThemeUILink, LinkProps} from 'theme-ui';
 
-const Link = ({href, ...props}: LinkProps) => {
+function Link({href, ...props}: LinkProps) {
 	const isApi = href.startsWith('/api/');
 
 	if (isApi || props.target === '_blank') {
@@ -14,11 +14,11 @@ const Link = ({href, ...props}: LinkProps) => {
 			<ThemeUILink {...props} />
 		</NextLink>
 	);
-};
+}
 
 Link.propTypes = {
 	href: PropTypes.string.isRequired,
-	target: PropTypes.string
+	target: PropTypes.string,
 };
 
 export default Link;

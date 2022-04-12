@@ -7,17 +7,17 @@ const heading = {
 	fontSize: [4, 6],
 	p: [4, 8],
 	background: 'white',
-	fontWeight: 'bold'
+	fontWeight: 'bold',
 };
 
 const theme = {
 	styles: {
 		h1: heading,
-		h2: heading
-	}
+		h2: heading,
+	},
 };
 
-const Index = () => {
+function Index() {
 	return (
 		<>
 			<NextSeo title="👋🏻" />
@@ -28,7 +28,7 @@ const Index = () => {
 						py: [20, 24],
 						mx: [-4, -8],
 						flexDirection: 'column',
-						justifyContent: 'space-between'
+						justifyContent: 'space-between',
 					}}
 				>
 					<Home />
@@ -36,6 +36,6 @@ const Index = () => {
 			</ThemeProvider>
 		</>
 	);
-};
+}
 
 export default Index;

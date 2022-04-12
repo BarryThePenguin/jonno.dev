@@ -6,7 +6,7 @@ import {AppProps} from 'next/app';
 import {DefaultSeo} from 'next-seo';
 import Layout from '../components/layout';
 
-const MyApp = ({Component, pageProps}: AppProps) => {
+function MyApp({Component, pageProps}: AppProps) {
 	return (
 		<Layout>
 			<DefaultSeo
@@ -16,22 +16,23 @@ const MyApp = ({Component, pageProps}: AppProps) => {
 					type: 'website',
 					locale: 'en_AU',
 					url: 'https://jonno.dev/',
-					site_name: 'Jonathan Haines'
+					// eslint-disable-next-line @typescript-eslint/naming-convention
+					site_name: 'Jonathan Haines',
 				}}
 				twitter={{
 					handle: 'BarryThePenguin',
 					site: 'https://twitter.com/BarryThePenguin',
-					cardType: 'summary_large_image'
+					cardType: 'summary_large_image',
 				}}
 			/>
 			<Component {...pageProps} />
 		</Layout>
 	);
-};
+}
 
 MyApp.propTypes = {
 	Component: PropTypes.any.isRequired,
-	pageProps: PropTypes.any
+	pageProps: PropTypes.any,
 };
 
 export default MyApp;
