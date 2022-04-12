@@ -8,6 +8,7 @@ const withMDX = nextMDX({
 	extension: /\.mdx?$/,
 	options: {
 		remarkPlugins: [externalLinks, images],
+		providerImportSource: '@mdx-js/react',
 	},
 });
 

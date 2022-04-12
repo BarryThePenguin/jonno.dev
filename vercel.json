@@ -1,6 +1,4 @@
 {
-  "version": 2,
-  "alias": ["jonno.dev"],
 	"rewrites": [
     {
       "source": "/service-worker.js",
