@@ -61,7 +61,7 @@
   },
   "xo": {
     "envs": "browser",
-    "nodeVersion": "14",
+    "nodeVersion": "18",
     "prettier": true,
     "extends": [
       "xo-react",

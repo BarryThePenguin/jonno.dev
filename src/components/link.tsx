@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import NextLink from 'next/link';
-import {Link as ThemeUILink, LinkProps} from 'theme-ui';
+import {Link as ThemeUILink, type LinkProps} from 'theme-ui';
 
 function Link({href, ...props}: LinkProps) {
 	const isApi = href.startsWith('/api/');
