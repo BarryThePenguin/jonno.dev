@@ -2,7 +2,7 @@ import '../css/site.css';
 import '../css/print.css';
 
 import PropTypes from 'prop-types';
-import {AppProps} from 'next/app';
+import {type AppProps} from 'next/app';
 import {DefaultSeo} from 'next-seo';
 import Layout from '../components/layout';
 

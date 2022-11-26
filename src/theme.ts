@@ -1,4 +1,5 @@
-import {Theme} from 'theme-ui';
+/* eslint-disable @typescript-eslint/naming-convention */
+import {type Theme} from 'theme-ui';
 
 const makeTheme = <T extends Theme>(t: T) => t;
 

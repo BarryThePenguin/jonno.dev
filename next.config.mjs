@@ -1,3 +1,4 @@
+import process from 'node:process';
 import bundleAnalyzer from '@next/bundle-analyzer';
 import withOffline from 'next-offline';
 import nextMDX from '@next/mdx';
