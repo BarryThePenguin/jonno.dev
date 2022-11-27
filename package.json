@@ -41,7 +41,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.2",
     "@mdx-js/loader": "^2.1.5",
-    "@next/bundle-analyzer": "^12.1.6",
+    "@next/bundle-analyzer": "^13.0.5",
     "@next/eslint-plugin-next": "^13.0.5",
     "@next/mdx": "^13.0.5",
     "@types/gtag.js": "^0.0.12",
