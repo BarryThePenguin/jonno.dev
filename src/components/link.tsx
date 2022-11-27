@@ -10,7 +10,7 @@ function Link({href, ...props}: LinkProps) {
 	}
 
 	return (
-		<NextLink passHref href={href}>
+		<NextLink legacyBehavior passHref href={href}>
 			<ThemeUILink {...props} />
 		</NextLink>
 	);

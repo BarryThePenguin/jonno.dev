@@ -21,7 +21,7 @@ function Resume() {
 	return (
 		<>
 			<NextSeo title="Resume" />
-			<ThemeProvider theme={theme} components={components}>
+			<ThemeProvider theme={theme}>
 				<Box
 					bg="gray.7"
 					sx={{
@@ -61,7 +61,12 @@ function Nav() {
 					}}
 					className="dn-print"
 				>
-					<NextImage src={jonnoPic} alt="profile image" />
+					<NextImage
+						src={jonnoPic}
+						alt="profile image"
+						width={285}
+						height={285}
+					/>
 				</div>
 				<Text as="h1" variant="hero">
 					Jonathan Haines
@@ -119,22 +124,22 @@ function Main() {
 			}}
 		>
 			<article className="career">
-				<About />
+				<About components={components} />
 			</article>
 			<article className="strengths">
-				<Skills />
+				<Skills components={components} />
 			</article>
 			<article className="employment">
-				<Work />
+				<Work components={components} />
 			</article>
 			<article className="volunteer">
-				<Volunteer />
+				<Volunteer components={components} />
 			</article>
 			<article className="education">
-				<Education />
+				<Education components={components} />
 			</article>
 			<article className="interests">
-				<Interests />
+				<Interests components={components} />
 			</article>
 		</Box>
 	);
