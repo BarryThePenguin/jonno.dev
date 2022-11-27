@@ -56,8 +56,8 @@
     "xo": "^0.53.1"
   },
   "overrides": {
-    "react": "$react",
-    "theme-ui": "$theme-ui"
+    "react": "^18.2.0",
+    "theme-ui": "^0.14.5"
   },
   "xo": {
     "envs": "browser",
