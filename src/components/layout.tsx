@@ -1,11 +1,12 @@
 import Script from 'next/script';
-import {Box, ThemeProvider} from 'theme-ui';
+import {Box} from 'theme-ui';
 import PropTypes from 'prop-types';
 import {Global} from '@emotion/react';
 import Head from 'next/head';
 import {fontFace} from 'polished';
 import theme from '../theme';
 import Link from './link';
+import {Provider} from './provider';
 
 function Reset() {
 	return (
@@ -99,7 +100,7 @@ function Layout({children}) {
 			</Script>
 			<Reset />
 			<Fonts />
-			<ThemeProvider theme={theme} components={components}>
+			<Provider theme={theme} components={components}>
 				<Box
 					p={[4, 8]}
 					sx={{
@@ -115,7 +116,7 @@ function Layout({children}) {
 				>
 					{children}
 				</Box>
-			</ThemeProvider>
+			</Provider>
 		</>
 	);
 }

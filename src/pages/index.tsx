@@ -1,6 +1,7 @@
-import {Flex, ThemeProvider} from 'theme-ui';
+import {Flex} from 'theme-ui';
 import {NextSeo} from 'next-seo';
 import Home from '../content/home.md';
+import {Provider} from '../components/provider';
 
 const heading = {
 	fontSize: [4, 6],
@@ -16,23 +17,31 @@ const theme = {
 	},
 };
 
+const components = {
+	wrapper({children}) {
+		return (
+			<Flex
+				sx={{
+					minHeight: '100%',
+					py: [20, 24],
+					mx: [-4, -8],
+					flexDirection: 'column',
+					justifyContent: 'space-between',
+				}}
+			>
+				{children}
+			</Flex>
+		);
+	},
+};
+
 function Index() {
 	return (
 		<>
 			<NextSeo title="👋🏻" />
-			<ThemeProvider theme={theme}>
-				<Flex
-					sx={{
-						minHeight: '100%',
-						py: [20, 24],
-						mx: [-4, -8],
-						flexDirection: 'column',
-						justifyContent: 'space-between',
-					}}
-				>
-					<Home />
-				</Flex>
-			</ThemeProvider>
+			<Provider theme={theme} components={components}>
+				<Home />
+			</Provider>
 		</>
 	);
 }

@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import {type Theme} from 'theme-ui';
-
-const makeTheme = <T extends Theme>(t: T) => t;
+import {makeTheme} from '@theme-ui/css/utils';
 
 const borderWidths = {
 	px: '1px',
