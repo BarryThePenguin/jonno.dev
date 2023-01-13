@@ -28,7 +28,7 @@
     "@theme-ui/css": "^0.15.4",
     "@theme-ui/mdx": "^0.15.4",
     "@theme-ui/style-guide": "^0.15.4",
-    "next": "^13.0.5",
+    "next": "^13.1.2",
     "next-seo": "^5.14.1",
     "polished": "^4.2.2",
     "prop-types": "^15.8.1",
