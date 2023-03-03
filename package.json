@@ -45,7 +45,7 @@
     "@next/eslint-plugin-next": "^13.0.5",
     "@next/mdx": "^13.0.5",
     "@types/gtag.js": "^0.0.12",
-    "@types/node": "18.11.9",
+    "@types/node": "18.14.5",
     "@types/react": "^18.0.25",
     "eslint-config-xo-react": "^0.27.0",
     "eslint-plugin-react": "^7.31.11",
