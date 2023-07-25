@@ -2,7 +2,7 @@ import NextImage from 'next/image';
 import {useThemeUI, Box, Text, Link, ThemeProvider} from 'theme-ui';
 import {NextSeo} from 'next-seo';
 import Header from '../components/header';
-import {Twitter, GitHub, LinkedIn} from '../components/icons';
+import {Twitter, GitHub, LinkedIn, Mastodon} from '../components/icons';
 import About from '../content/about.md';
 import Skills from '../content/skills.md';
 import Work from '../content/work.md';
@@ -78,8 +78,23 @@ function Nav() {
 						Web Technology Consultant
 					</small>
 				</Text>
-				<Text as="p" my="4" color="white" className="dn-print">
+				<Text
+					as="p"
+					my="4"
+					color="white"
+					sx={{fontSize: 6}}
+					className="dn-print"
+				>
 					<Link
+						rel="me"
+						variant="social"
+						href="https://mastodon.social/@BarryThePenguin"
+						title="Mastodon"
+					>
+						<Mastodon />
+					</Link>
+					<Link
+						rel="me"
 						variant="social"
 						href="https://twitter.com/BarryThePenguin"
 						title="Twitter"
@@ -87,6 +102,7 @@ function Nav() {
 						<Twitter />
 					</Link>
 					<Link
+						rel="me"
 						variant="social"
 						href="https://github.com/BarryThePenguin"
 						title="GitHub"
@@ -94,6 +110,7 @@ function Nav() {
 						<GitHub />
 					</Link>
 					<Link
+						rel="me"
 						variant="social"
 						href="https://au.linkedin.com/in/jonnohaines"
 						title="LinkedIn"
