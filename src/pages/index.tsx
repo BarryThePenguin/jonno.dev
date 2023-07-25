@@ -42,6 +42,15 @@ function Index() {
 			<Provider theme={theme} components={components}>
 				<Home />
 			</Provider>
+			<a
+				// eslint-disable-next-line react/no-invalid-html-attribute
+				rel="me"
+				href="https://mastodon.social/@BarryThePenguin"
+				title="Mastodon"
+				style={{visibility: 'hidden'}}
+			>
+				Mastodon
+			</a>
 		</>
 	);
 }
