@@ -181,12 +181,12 @@ const theme = makeTheme({
 	},
 	colors: {
 		...baseColours,
-		text: baseColours.gray[8],
+		text: baseColours.gray[8] ?? '',
 		background: `#fff`,
-		primary: baseColours.blue[4],
-		primaryHover: baseColours.blue[5],
-		secondary: baseColours.gray[6],
-		headingDark: baseColours.blue[7],
+		primary: baseColours.blue[4] ?? '',
+		primaryHover: baseColours.blue[5] ?? '',
+		secondary: baseColours.gray[6] ?? '',
+		headingDark: baseColours.blue[7] ?? '',
 	},
 	sizes,
 	images: {

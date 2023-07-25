@@ -1,9 +1,8 @@
-import '../css/site.css';
-import '../css/print.css';
-
 import PropTypes from 'prop-types';
 import {type AppProps} from 'next/app';
 import {DefaultSeo} from 'next-seo';
+import '../css/site.css';
+import '../css/print.css';
 import Layout from '../components/layout';
 
 function MyApp({Component, pageProps}: AppProps) {

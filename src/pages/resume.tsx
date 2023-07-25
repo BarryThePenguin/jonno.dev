@@ -1,5 +1,5 @@
 import NextImage from 'next/image';
-import {useThemeUI, Box, Text, Link, ThemeProvider} from 'theme-ui';
+import {useThemeUI, Box, Text, Link, ThemeUIProvider} from 'theme-ui';
 import {NextSeo} from 'next-seo';
 import Header from '../components/header';
 import {Twitter, GitHub, LinkedIn, Mastodon} from '../components/icons';
@@ -21,7 +21,7 @@ function Resume() {
 	return (
 		<>
 			<NextSeo title="Resume" />
-			<ThemeProvider theme={theme}>
+			<ThemeUIProvider theme={theme}>
 				<Box
 					bg="gray.7"
 					sx={{
@@ -35,7 +35,7 @@ function Resume() {
 					<Nav />
 					<Main />
 				</Box>
-			</ThemeProvider>
+			</ThemeUIProvider>
 		</>
 	);
 }
