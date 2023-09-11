@@ -48,7 +48,7 @@
     "@tsconfig/next": "^2.0.0",
     "@tsconfig/strictest": "^2.0.1",
     "@types/gtag.js": "^0.0.12",
-    "@types/node": "18.15.11",
+    "@types/node": "20.6.0",
     "@types/react": "^18.0.25",
     "eslint-config-xo-react": "^0.27.0",
     "eslint-plugin-react": "^7.33.0",
