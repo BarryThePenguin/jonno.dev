@@ -8,7 +8,6 @@ const withMDX = nextMDX({
 	extension: /\.mdx?$/,
 	options: {
 		remarkPlugins: [externalLinks, images],
-		providerImportSource: '@mdx-js/react',
 	},
 });
 
@@ -16,8 +15,12 @@ const withBundleAnalyzer = bundleAnalyzer({
 	enabled: process.env.ANALYZE === 'true',
 });
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-	pageExtensions: ['js', 'jsx', 'tsx', 'md', 'mdx'],
+	pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+	experimental: {
+		mdxRs: true,
+	},
 };
 
 export default withBundleAnalyzer(withMDX(nextConfig));
