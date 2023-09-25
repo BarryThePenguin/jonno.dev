@@ -36,7 +36,7 @@
     "@mdx-js/loader": "^2.1.5",
     "@next/bundle-analyzer": "^13.5.2",
     "@next/eslint-plugin-next": "^13.5.2",
-    "@next/mdx": "^13.5.1",
+    "@next/mdx": "^13.5.2",
     "@tailwindcss/typography": "^0.5.10",
     "@tsconfig/next": "^2.0.0",
     "@tsconfig/strictest": "^2.0.2",
