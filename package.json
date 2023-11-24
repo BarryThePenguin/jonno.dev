@@ -50,7 +50,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "postcss": "^8.4.30",
     "prettier": "^3.0.3",
-    "rollup": "^3.29.3",
+    "rollup": "^4.5.2",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.2.2",
     "xo": "^0.56.0"
