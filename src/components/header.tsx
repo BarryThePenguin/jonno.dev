@@ -1,5 +1,4 @@
 import {type PropsWithChildren} from 'react';
-import PropTypes from 'prop-types';
 
 function Header({children}: PropsWithChildren) {
 	return (
@@ -10,9 +9,5 @@ function Header({children}: PropsWithChildren) {
 		</header>
 	);
 }
-
-Header.propTypes = {
-	children: PropTypes.node.isRequired,
-};
 
 export default Header;

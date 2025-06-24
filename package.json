@@ -26,8 +26,7 @@
   "dependencies": {
     "@mdx-js/react": "^2.1.5",
     "next": "^15.3.4",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
+    "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "remark-external-links": "^9.0.1",
     "remark-images": "^4.1.0"
@@ -38,47 +37,21 @@
     "@next/eslint-plugin-next": "^15.3.4",
     "@next/mdx": "^15.3.4",
     "@tailwindcss/typography": "^0.5.10",
-    "@tsconfig/next": "^2.0.0",
-    "@tsconfig/strictest": "^2.0.2",
-    "@types/gtag.js": "^0.0.14",
+    "@tsconfig/next": "^2.0.3",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/gtag.js": "^0.0.20",
     "@types/mdx": "^2.0.13",
     "@types/node": "24.0.3",
-    "@types/react": "^18.2.22",
+    "@types/react": "^19.1.8",
     "autoprefixer": "^10.4.21",
-    "eslint-config-xo-react": "^0.27.0",
+    "eslint-config-xo-react": "^0.28.0",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "postcss": "^8.5.6",
-    "prettier": "^3.0.3",
+    "prettier": "^3.6.0",
     "rollup": "^4.44.0",
     "tailwindcss": "^3.3.3",
-    "typescript": "^5.2.2",
-    "xo": "^0.56.0"
-  },
-  "overrides": {
-    "tsconfig-paths": "^4.0.0"
-  },
-  "xo": {
-    "envs": "browser",
-    "nodeVersion": "18",
-    "prettier": true,
-    "extends": [
-      "xo-react",
-      "plugin:react/jsx-runtime",
-      "plugin:@next/next/recommended"
-    ],
-    "rules": {
-      "import/extensions": "off",
-      "node/prefer-global/process": "off",
-      "@typescript-eslint/triple-slash-reference": "off",
-      "react/no-unknown-property": [
-        "error",
-        {
-          "ignore": [
-            "sx"
-          ]
-        }
-      ]
-    }
+    "typescript": "^5.8.3",
+    "xo": "^1.1.1"
   }
 }
