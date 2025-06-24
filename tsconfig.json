@@ -1,6 +1,7 @@
 {
 	"extends": ["@tsconfig/strictest", "@tsconfig/next"],
 	"compilerOptions": {
+		"allowImportingTsExtensions": true,
 		"plugins": [
 			{
 				"name": "next"
