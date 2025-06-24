@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@mdx-js/loader": "^2.1.5",
-    "@next/bundle-analyzer": "^13.5.3",
+    "@next/bundle-analyzer": "^15.3.4",
     "@next/eslint-plugin-next": "^15.3.4",
     "@next/mdx": "^15.3.4",
     "@tailwindcss/typography": "^0.5.10",
