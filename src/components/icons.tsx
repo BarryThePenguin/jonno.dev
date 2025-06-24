@@ -1,21 +1,25 @@
 export function BlueSky() {
 	return (
-		<svg
-			className="inline transition-[fill] fill-white active:fill-[url(#bluesky)] focus:fill-[url(#bluesky)] hover:fill-[url(#bluesky)]"
-			height="1em"
-			viewBox="0 0 448 512"
-		>
+		<svg className="inline" height="1em" viewBox="0 0 448 512" color="white">
+			<use fill="currentColor" href="#bluesky-path" />
+			<use
+				href="#bluesky-path"
+				className="fill-[url(#bluesky)] opacity-0 transition-opacity hover:opacity-100 focus:opacity-100 active:opacity-100"
+			/>
 			<defs>
+				<path
+					id="bluesky-path"
+					d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"
+				/>
 				<pattern
 					id="bluesky"
 					patternUnits="userSpaceOnUse"
 					width="100%"
 					height="100%"
 				>
-					<image href="/bluesky.png" x="0" y="0" width="100%" height="100%" />
+					<image color="white" href="/bluesky.png" width="100%" height="100%" />
 				</pattern>
 			</defs>
-			<path d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z" />
 		</svg>
 	);
 }

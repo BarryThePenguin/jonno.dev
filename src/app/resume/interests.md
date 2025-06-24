@@ -2,14 +2,15 @@
 
 Open Source Software
 
+- Hono
 - remark
-- KeystoneJS
 - eslint
 - AVA
 
 Relaxing
 
 - Cycling
+- Radio control cars
 - Guitar
 - Board games
 
