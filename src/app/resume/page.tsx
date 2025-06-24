@@ -53,6 +53,7 @@ function Nav() {
 			<nav className="text-white">
 				<div className="inline-block overflow-hidden mx-auto my-8 border-solid border-8 rounded-full border-gray-100 dn-print">
 					<Image
+						priority
 						src="/jonno.jpg"
 						alt="profile image"
 						width={285}

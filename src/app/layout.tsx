@@ -1,4 +1,4 @@
-import {type Metadata} from 'next';
+import {type Viewport, type Metadata} from 'next';
 import Script from 'next/script';
 import {EB_Garamond} from 'next/font/google';
 import {type PropsWithChildren} from 'react';
@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 		url: 'https://jonno.dev/',
 		siteName: 'Jonathan Haines',
 	},
-	themeColor: '#3c9eff',
 	title: {
 		default: 'Jonathan Haines',
 		template: '%s | Jonathan Haines',
@@ -25,7 +24,12 @@ export const metadata: Metadata = {
 		site: '@BarryThePenguin',
 		card: 'summary_large_image',
 	},
-	viewport: 'width=device-width, initial-scale=1',
+};
+
+export const viewport: Viewport = {
+	themeColor: '#3c9eff',
+	width: 'device-width',
+	initialScale: 1,
 };
 
 // eslint-disable-next-line new-cap
