@@ -1,13 +1,11 @@
-import {type PropsWithChildren} from 'react';
+import {type PropsWithChildren} from 'hono/jsx';
 
-function Header({children}: PropsWithChildren) {
+export async function Header({children}: PropsWithChildren) {
 	return (
-		<header>
-			<h2 className="banner font-normal leading-loose sm:my-4 -ml-9 sm:-ml-16 pl-8 sm:pl-16 dn-print-ba">
+		<header className="banner">
+			<h2 className="leading-loose font-normal print:border-none">
 				{children}
 			</h2>
 		</header>
 	);
 }
-
-export default Header;

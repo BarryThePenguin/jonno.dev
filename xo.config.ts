@@ -1,4 +1,5 @@
 import {type FlatXoConfig} from 'xo';
+import {version} from 'hono/jsx';
 
 const xoConfig: FlatXoConfig = [
 	{
@@ -6,9 +7,8 @@ const xoConfig: FlatXoConfig = [
 		react: true,
 		rules: {
 			'react/react-in-jsx-scope': 'off',
-			'react/jsx-uses-react': 'off',
 		},
-		settings: {react: {jsxPragma: null}},
+		settings: {react: {jsxPragma: null, version}},
 	},
 ];
 

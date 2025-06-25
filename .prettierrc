@@ -4,5 +4,14 @@
 	],
 	"singleQuote": true,
 	"bracketSpacing": false,
-	"trailingComma": "all"
+	"trailingComma": "all",
+	"tailwindStylesheet": "src/site.css",
+	"overrides": [
+		{
+			"files": "*.jsonc",
+			"options": {
+				"trailingComma": "none"
+			}
+		}
+	]
 }

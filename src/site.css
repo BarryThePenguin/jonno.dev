@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+@theme {
+	--font-sans:
+		Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+
+	--inset-shadow-nav: inset -10px 0px 5px -5px
+		var(--tw-inset-shadow-color, rgba(0, 0, 0, 25%));
+
+	--background-image-home: repeating-linear-gradient(
+		45deg,
+		var(--color-pink-500),
+		var(--color-pink-500) 10px,
+		white 10px,
+		white 20px
+	);
+}
+
+@layer utilities {
+	.prose {
+		--tw-prose-links: --theme(--color-gray-500);
+
+		a {
+			@apply transition-colors;
+		}
+
+		a:hover {
+			--tw-prose-links: --theme(--color-sky-400);
+		}
+
+		@media print {
+			--tw-prose-links: --theme(--color-black);
+		}
+	}
+}
+
+@layer components {
+	.banner {
+		@apply relative -ml-9 bg-sky-500 pl-8 shadow-md shadow-gray-500/50 sm:my-4 sm:-ml-16 sm:pl-16;
+
+		&::after {
+			@apply absolute top-full left-0 h-0 w-0 border-x-10 border-y-5 border-solid border-t-sky-700 border-r-sky-700 border-b-transparent border-l-transparent content-[''] sm:border-x-16 sm:border-y-8;
+		}
+	}
+}

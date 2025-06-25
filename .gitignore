@@ -5,5 +5,4 @@ dist
 tmp
 npm-debug.log*
 .DS_Store
-.next
-next-env.d.ts
+.wrangler

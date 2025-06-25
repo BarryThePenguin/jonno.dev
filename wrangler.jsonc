@@ -1,0 +1,16 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "jonno-dev",
+	"compatibility_date": "2025-05-05",
+	"main": "./src/index.tsx",
+	"assets": {
+		"directory": "./dist/client",
+		"not_found_handling": "404-page"
+	},
+	"routes": [
+		{
+			"custom_domain": true,
+			"pattern": "jonno.dev"
+		}
+	]
+}

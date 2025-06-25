@@ -1,13 +1,11 @@
 {
-	"extends": ["@tsconfig/strictest", "@tsconfig/next"],
+	"extends": ["@tsconfig/strictest"],
 	"compilerOptions": {
 		"allowImportingTsExtensions": true,
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
-		"target": "ES2017"
-	},
-	"include": ["next-env.d.ts", "src", ".next/types/**/*.ts"]
+		"jsx": "react-jsx",
+		"jsxImportSource": "hono/jsx",
+		"module": "Preserve",
+		"noEmit": true,
+		"types": ["vite/client"]
+	}
 }
