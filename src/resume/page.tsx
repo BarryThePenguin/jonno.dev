@@ -73,9 +73,9 @@ async function Nav() {
 				<p className="my-4">
 					<a
 						className="hover:text-sky-500 focus:text-sky-500 active:text-sky-500"
-						href="mailto:jonno.haines@gmail.com"
+						href="mailto:me@jonno.dev"
 					>
-						jonno.haines@gmail.com
+						me@jonno.dev
 					</a>
 				</p>
 			</nav>
