@@ -1,6 +1,6 @@
 ## Work
 
-### Blake eLearning - Senior Software Engineer
+### 3P Learning - Senior Software Engineer
 #### June 2018 — June 2025
 
 - **Key Technologies:** npm, Ember, SCSS

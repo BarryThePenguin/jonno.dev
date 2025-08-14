@@ -1,18 +1,23 @@
-import {html} from 'hono/html';
-import {jsxRenderer} from 'hono/jsx-renderer';
+import { html } from "hono/html";
+import { jsxRenderer } from "hono/jsx-renderer";
 
 export const renderer = jsxRenderer(
 	async ({
 		children,
-		description = 'Jonathan Haines is software engineer who is passionate about building up new developers, improving experiences between people and technology, and web technologies.',
+		description = "Jonathan Haines is software engineer who is passionate about building up new developers, improving experiences between people and technology, and web technologies.",
+		expect,
 		openGraph = {
-			locale: 'en_AU',
-			type: 'website',
-			url: 'https://jonno.dev/',
-			siteName: 'Jonathan Haines',
+			locale: "en_AU",
+			type: "website",
+			url: "https://jonno.dev/",
+			siteName: "Jonathan Haines",
 		},
-		twitter = {site: '@BarryThePenguin'},
-		viewport = {width: 'device-width', initialScale: 1, themeColor: '#3c9eff'},
+		twitter = { site: "@BarryThePenguin" },
+		viewport = {
+			width: "device-width",
+			initialScale: 1,
+			themeColor: "#3c9eff",
+		},
 		title,
 	}) => (
 		<html lang="en">
@@ -72,8 +77,8 @@ export const renderer = jsxRenderer(
 						function gtag() {
 							dataLayer.push(arguments);
 						}
-						gtag('js', new Date());
-						gtag('config', 'G-KMG51516QN');
+						gtag("js", new Date());
+						gtag("config", "G-KMG51516QN");
 					</script>
 				`}
 			</body>

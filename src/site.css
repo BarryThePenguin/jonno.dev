@@ -1,46 +1,81 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@view-transition {
+	navigation: auto;
+}
+
 @theme {
+	--color-black: oklch(20% 55.00000000000001% 180);
+	--color-dark-blue: oklch(
+		56.56606523457748% 53.35494437460665% 224.47085729384875
+	);
+	--color-purple: oklch(
+		76.13526500136705% 48.41186402706317% 291.9615242270663
+	);
+	--color-pink: oklch(
+		89.45898244330108% 40.084540625854395% 317.57359312880715
+	);
+	--color-light-blue: oklch(97.36791099937064% 27.85379077161093% 180);
+	--color-white: oklch(100% 5.000000000776767% 42.42640687119284);
 	--font-sans:
-		Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+		Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
 
 	--inset-shadow-nav: inset -10px 0px 5px -5px
 		var(--tw-inset-shadow-color, rgba(0, 0, 0, 25%));
 
-	--background-image-home: repeating-linear-gradient(
-		45deg,
-		var(--color-pink-500),
-		var(--color-pink-500) 10px,
-		white 10px,
-		white 20px
+	--background-image-home-light: linear-gradient(
+		to bottom right in oklch,
+		var(--color-light-blue) 0%,
+		var(--color-pink) 33%,
+		var(--color-purple) 66%,
+		var(--color-dark-blue) 100%
 	);
+
+	--background-image-home-dark: linear-gradient(
+		to bottom right in oklch,
+		var(--color-dark-blue) 0%,
+		var(--color-pink) 50%,
+		var(--color-purple) 100%
+	);
+}
+
+@keyframes blob {
+	0%,
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+	25% {
+		transform: translate(20px, -50px) scale(1.1);
+	}
+	50% {
+		transform: translate(0, 20px) scale(1);
+	}
+	75% {
+		transform: translate(-20px, -15px) scale(0.9);
+	}
 }
 
 @layer utilities {
 	.prose {
-		--tw-prose-links: --theme(--color-gray-500);
+		--tw-prose-headings: --theme(--color-black);
+		--tw-prose-links: --theme(--color-dark-blue);
 
 		a {
 			@apply transition-colors;
 		}
 
 		a:hover {
-			--tw-prose-links: --theme(--color-sky-400);
+			--tw-prose-links: --theme(--color-purple);
 		}
 
 		@media print {
-			--tw-prose-links: --theme(--color-black);
+			--tw-prose-links: #000;
 		}
 	}
-}
 
-@layer components {
-	.banner {
-		@apply relative -ml-9 bg-sky-500 pl-8 shadow-md shadow-gray-500/50 sm:my-4 sm:-ml-16 sm:pl-16;
-
-		&::after {
-			@apply absolute top-full left-0 h-0 w-0 border-x-10 border-y-5 border-solid border-t-sky-700 border-r-sky-700 border-b-transparent border-l-transparent content-[''] sm:border-x-16 sm:border-y-8;
-		}
+	.animate-blob {
+		animation: blob 10s infinite;
+		animation-delay: 0s, 2s, 4s;
 	}
 }

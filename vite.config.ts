@@ -11,6 +11,12 @@ import externalLinks from 'rehype-external-links';
 const entry = 'src/index.tsx';
 
 export default defineConfig({
+	build: {
+		cssMinify: 'lightningcss',
+	},
+	css: {
+		transformer: 'lightningcss',
+	},
 	environments: {
 		client: {
 			build: {
