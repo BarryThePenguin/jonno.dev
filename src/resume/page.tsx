@@ -41,7 +41,7 @@ async function Page() {
 
 async function Nav() {
 	return (
-		<div className="w-full px-4 text-center inset-shadow-nav lg:w-1/3 lg:px-12">
+		<div className="w-full px-4 text-center lg:w-1/3 lg:px-12 lg:inset-shadow-nav">
 			<nav className="text-white">
 				<div className="mx-auto my-8 inline-block overflow-hidden rounded-full border-8 border-solid border-white print:hidden">
 					<img src="/jonno.jpg" alt="profile image" width={285} height={285} />
@@ -87,7 +87,7 @@ async function Main() {
 	return (
 		<main
 			role="main"
-			className="w-full rounded-r-3xl bg-white px-4 py-2 sm:px-8 lg:w-2/3"
+			className="w-full rounded-b-3xl bg-white px-4 py-2 sm:px-8 lg:w-2/3 lg:rounded-l-none lg:rounded-r-3xl"
 		>
 			<article className="career prose">
 				<About components={components} />
