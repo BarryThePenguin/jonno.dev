@@ -18,6 +18,13 @@
 	);
 	--color-light-blue: oklch(97.36791099937064% 27.85379077161093% 180);
 	--color-white: oklch(100% 5.000000000776767% 42.42640687119284);
+
+	--color-black-gray: oklch(10% 100% 180);
+	--color-dark-gray: oklch(34.72135954999579% 95.10565162951535% 180);
+	--color-gray: oklch(57.02282018339785% 80.90169943749474% 180);
+	--color-light-gray: oklch(74.7213595499958% 58.778525229247315% 180);
+	--color-white-gray: oklch(86.08452130361228% 30.901699437494745% 180);
+
 	--font-sans:
 		Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
 
@@ -35,17 +42,22 @@
 	--background-image-home-dark: linear-gradient(
 		to bottom right in oklch,
 		var(--color-dark-blue) 0%,
-		var(--color-pink) 50%,
-		var(--color-purple) 100%
+		var(--color-purple) 33%,
+		var(--color-pink) 66%,
+		var(--color-light-blue) 100%
 	);
 }
 
 @utility prose {
-	--tw-prose-headings: --theme(--color-black);
+	--tw-prose-body: --theme(--color-black-gray);
+	--tw-prose-headings: --theme(--color-black-gray);
+	--tw-prose-hr: --theme(--color-pink);
 	--tw-prose-links: --theme(--color-dark-blue);
 
-	--tw-prose-invert-body: theme(--color-white);
-	--tw-prose-invert-headings: theme(--color-white);
+	--tw-prose-invert-body: --theme(--color-white);
+	--tw-prose-invert-headings: --theme(--color-white);
+	--tw-prose-invert-hr: --theme(--color-pink);
+	--tw-prose-invert-links: --theme(--color-light-blue);
 }
 
 a {

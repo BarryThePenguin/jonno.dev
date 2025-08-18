@@ -66,8 +66,14 @@ export const renderer = jsxRenderer(
 					sizes="180x180"
 				/>
 			</head>
-			<body className="font-sans">
-				<div className="min-h-screen p-4 sm:p-8">{children}</div>
+			<body className="overscroll-none font-sans">
+				<div className="min-h-screen bg-home-light p-4 sm:p-8 dark:bg-home-dark">
+					{children}
+				</div>
+				<script
+					src={import.meta.env.PROD ? `/assets/client.js` : `/src/client.tsx`}
+					type="module"
+				/>
 
 				<script src="https://www.googletagmanager.com/gtag/js?id=G-KMG51516QN" />
 				{html`

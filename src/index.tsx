@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import Page from "./page.mdx";
+import Page from "./page.tsx";
 import Resume from "./resume/page.tsx";
 import { renderer } from "./layout.tsx";
 import NotFound from "./not-found.tsx";
