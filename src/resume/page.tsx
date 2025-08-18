@@ -1,6 +1,5 @@
 /* eslint-disable react/no-invalid-html-attribute */
 
-import { html } from "hono/html";
 import { type JSX } from "hono/jsx";
 import { Header } from "../components/header.tsx";
 import { BlueSky, GitHub, LinkedIn, Mastodon } from "../components/icons.tsx";
