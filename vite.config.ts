@@ -23,6 +23,7 @@ export default defineConfig({
 				rollupOptions: {
 					input: ["./src/client.tsx", "./src/site.css", "./src/print.css"],
 					output: {
+						entryFileNames: "assets/[name].js",
 						assetFileNames: "assets/[name].[ext]",
 					},
 				},
@@ -34,9 +35,6 @@ export default defineConfig({
 			},
 		},
 	},
-	// Esbuild: {
-	// 	jsxImportSource: "hono/jsx/dom",
-	// },
 	plugins: [
 		mdx({
 			jsxImportSource: "hono/jsx",
