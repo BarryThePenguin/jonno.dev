@@ -71,12 +71,15 @@ export const renderer = jsxRenderer(
 					{children}
 				</div>
 				<script
-					defer
+					async
 					src={import.meta.env.PROD ? `/assets/client.js` : `/src/client.tsx`}
 					type="module"
 				/>
 
-				<script src="https://www.googletagmanager.com/gtag/js?id=G-KMG51516QN" />
+				<script
+					async
+					src="https://www.googletagmanager.com/gtag/js?id=G-KMG51516QN"
+				/>
 				{html`
 					<script id="google-analytics">
 						window.dataLayer = window.dataLayer || [];
