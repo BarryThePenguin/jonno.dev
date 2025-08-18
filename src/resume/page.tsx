@@ -88,7 +88,7 @@ async function Main() {
 	return (
 		<main
 			role="main"
-			className="w-full rounded-b-3xl bg-white p-4 sm:px-8 lg:w-2/3 lg:rounded-l-none lg:rounded-r-3xl dark:bg-black-gray"
+			className="w-full rounded-b-3xl bg-white p-4 pb-8 sm:px-8 lg:w-2/3 lg:rounded-l-none lg:rounded-r-3xl dark:bg-black-gray"
 		>
 			<article className="career prose dark:prose-invert">
 				<About components={components} />
