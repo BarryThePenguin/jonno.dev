@@ -71,6 +71,7 @@ export const renderer = jsxRenderer(
 					{children}
 				</div>
 				<script
+					defer
 					src={import.meta.env.PROD ? `/assets/client.js` : `/src/client.tsx`}
 					type="module"
 				/>
