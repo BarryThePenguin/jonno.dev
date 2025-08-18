@@ -4,6 +4,7 @@ import { type JSX } from "hono/jsx";
 import { Header } from "../components/header.tsx";
 import { BlueSky, GitHub, LinkedIn, Mastodon } from "../components/icons.tsx";
 import { Navigation } from "../components/navigation.tsx";
+import { Article } from "../components/article.tsx";
 import About from "./about.md";
 import Skills from "./skills.md";
 import Work from "./work.md";
@@ -90,21 +91,21 @@ async function Main() {
 			role="main"
 			className="w-full rounded-b-3xl bg-white p-4 pb-8 sm:px-8 lg:w-2/3 lg:rounded-l-none lg:rounded-r-3xl dark:bg-black-gray"
 		>
-			<article className="career prose dark:prose-invert">
+			<Article>
 				<About components={components} />
-			</article>
-			<article className="strengths prose dark:prose-invert">
+			</Article>
+			<Article>
 				<Skills components={components} />
-			</article>
-			<article className="employment prose dark:prose-invert">
+			</Article>
+			<Article>
 				<Work components={components} />
-			</article>
-			<article className="education prose dark:prose-invert">
+			</Article>
+			<Article>
 				<Education components={components} />
-			</article>
-			<article className="interests prose dark:prose-invert">
+			</Article>
+			<Article>
 				<Interests components={components} />
-			</article>
+			</Article>
 		</main>
 	);
 }

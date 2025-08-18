@@ -51,12 +51,12 @@
 @utility prose {
 	--tw-prose-body: --theme(--color-black-gray);
 	--tw-prose-headings: --theme(--color-black-gray);
-	--tw-prose-hr: --theme(--color-pink);
+	--tw-prose-hr: --theme(--color-purple);
 	--tw-prose-links: --theme(--color-dark-blue);
 
 	--tw-prose-invert-body: --theme(--color-white);
 	--tw-prose-invert-headings: --theme(--color-white);
-	--tw-prose-invert-hr: --theme(--color-pink);
+	--tw-prose-invert-hr: --theme(--color-purple);
 	--tw-prose-invert-links: --theme(--color-light-blue);
 }
 
