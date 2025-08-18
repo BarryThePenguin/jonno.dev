@@ -17,12 +17,7 @@ type SocialLinkProps = JSX.IntrinsicElements["a"];
 
 async function SocialLink({ children, href, title }: SocialLinkProps) {
 	return (
-		<a
-			className="no-underline transition-colors hover:text-purple focus:text-purple active:text-purple"
-			rel="me"
-			href={href}
-			title={title}
-		>
+		<a rel="me" href={href} title={title}>
 			{children}
 		</a>
 	);
@@ -41,45 +36,43 @@ async function Page() {
 
 async function Nav() {
 	return (
-		<div className="w-full px-4 text-center lg:w-1/3 lg:px-12 lg:inset-shadow-nav">
-			<nav className="text-white">
-				<div className="mx-auto my-8 inline-block overflow-hidden rounded-full border-8 border-solid border-white print:hidden">
-					<img src="/jonno.jpg" alt="profile image" width={285} height={285} />
-				</div>
-				<h1 className="my-8 font-sans text-5xl leading-relaxed">
-					Jonathan Haines
-					<small className="block">Web Technology Consultant</small>
-				</h1>
-				<p className="my-4 space-x-2 text-5xl print:hidden">
-					<SocialLink href="https://bsky.app/profile/jonno.dev" title="BlueSky">
-						<BlueSky />
-					</SocialLink>
-					<SocialLink
-						href="https://mastodon.social/@BarryThePenguin"
-						title="Mastodon"
-					>
-						<Mastodon />
-					</SocialLink>
-					<SocialLink href="https://github.com/BarryThePenguin" title="GitHub">
-						<GitHub />
-					</SocialLink>
-					<SocialLink
-						href="https://au.linkedin.com/in/jonnohaines"
-						title="LinkedIn"
-					>
-						<LinkedIn />
-					</SocialLink>
-				</p>
-				<p className="my-4">
-					<a
-						className="transition-colors hover:text-purple focus:text-purple active:text-purple"
-						href="mailto:me@jonno.dev"
-					>
-						me@jonno.dev
-					</a>
-				</p>
-			</nav>
-		</div>
+		<nav className="w-full space-y-4 p-4 text-center text-3xl font-normal text-white lg:w-1/3 lg:space-y-8 lg:px-12 lg:text-5xl lg:inset-shadow-nav">
+			<img
+				className="inline-block rounded-full border-8 border-white print:hidden"
+				src="/jonno.jpg"
+				alt="profile image"
+				width={285}
+				height={285}
+			/>
+			<h1 className="leading-relaxed">
+				Jonathan Haines
+				<small className="inline-block">Web Technology Consultant</small>
+			</h1>
+
+			<p className="space-x-2 print:hidden">
+				<SocialLink href="https://bsky.app/profile/jonno.dev" title="BlueSky">
+					<BlueSky />
+				</SocialLink>
+				<SocialLink
+					href="https://mastodon.social/@BarryThePenguin"
+					title="Mastodon"
+				>
+					<Mastodon />
+				</SocialLink>
+				<SocialLink href="https://github.com/BarryThePenguin" title="GitHub">
+					<GitHub />
+				</SocialLink>
+				<SocialLink
+					href="https://au.linkedin.com/in/jonnohaines"
+					title="LinkedIn"
+				>
+					<LinkedIn />
+				</SocialLink>
+			</p>
+			<p className="text-lg lg:text-xl">
+				<a href="mailto:me@jonno.dev">me@jonno.dev</a>
+			</p>
+		</nav>
 	);
 }
 
@@ -87,7 +80,7 @@ async function Main() {
 	return (
 		<main
 			role="main"
-			className="w-full rounded-b-3xl bg-white px-4 py-2 sm:px-8 lg:w-2/3 lg:rounded-l-none lg:rounded-r-3xl"
+			className="w-full rounded-b-3xl bg-white p-4 sm:px-8 lg:w-2/3 lg:rounded-l-none lg:rounded-r-3xl"
 		>
 			<article className="career prose">
 				<About components={components} />

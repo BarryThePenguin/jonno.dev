@@ -1,8 +1,10 @@
 ## About
 
-Passionate about building up new developers, improving experiences
-between people and technology, and open source projects and
-software.
+I am passionate about building quality software, with a preference for
+simplicity and continuous improvment. I seek to have a deep
+understanding of the technologies I use, through continual learning and
+engagment with open source communities. I value diversity of ideas
+and experiences by building confidence in others, and using my skills and
+knowledge to help teams to succeed.
 
-Currently exploring web standards, functional programming and
-composable user interfaces.
+I am currently exploring web standards, distributed applications, and edge computing 👀

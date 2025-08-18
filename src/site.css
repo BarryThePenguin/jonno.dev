@@ -40,6 +40,22 @@
 	);
 }
 
+@utility prose {
+	--tw-prose-headings: --theme(--color-black);
+	--tw-prose-links: --theme(--color-dark-blue);
+
+	--tw-prose-invert-body: theme(--color-white);
+	--tw-prose-invert-headings: theme(--color-white);
+}
+
+a {
+	@apply transition-colors hover:text-purple focus:text-purple active:text-purple;
+
+	@media print {
+		color: #000;
+	}
+}
+
 @keyframes blob {
 	0%,
 	100% {
@@ -53,29 +69,5 @@
 	}
 	75% {
 		transform: translate(-20px, -15px) scale(0.9);
-	}
-}
-
-@layer utilities {
-	.prose {
-		--tw-prose-headings: --theme(--color-black);
-		--tw-prose-links: --theme(--color-dark-blue);
-
-		a {
-			@apply transition-colors;
-		}
-
-		a:hover {
-			--tw-prose-links: --theme(--color-purple);
-		}
-
-		@media print {
-			--tw-prose-links: #000;
-		}
-	}
-
-	.animate-blob {
-		animation: blob 10s infinite;
-		animation-delay: 0s, 2s, 4s;
 	}
 }
