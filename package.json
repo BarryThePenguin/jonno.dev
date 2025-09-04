@@ -24,7 +24,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "hono": "^4.9.2",
+    "hono": "^4.9.6",
     "rehype-external-links": "^3.0.0",
     "remark-images": "^4.1.0"
   },
