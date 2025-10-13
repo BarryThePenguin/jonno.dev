@@ -34,7 +34,7 @@
     "@hono/vite-dev-server": "^0.23.0",
     "@hono/vite-ssg": "^0.2.0",
     "@mdx-js/rollup": "^3.1.1",
-    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.14",
     "@tsconfig/strictest": "^2.0.6",
     "@types/gtag.js": "^0.0.20",
