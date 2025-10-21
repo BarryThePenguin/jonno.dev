@@ -39,7 +39,7 @@
     "@tsconfig/strictest": "^2.0.6",
     "@types/gtag.js": "^0.0.20",
     "@types/mdx": "^2.0.13",
-    "@types/node": "24.7.1",
+    "@types/node": "24.9.1",
     "eslint-config-xo-react": "^0.28.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.0",
