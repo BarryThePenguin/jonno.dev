@@ -17,7 +17,7 @@
   "homepage": "https://jonno.dev/",
   "main": "index.js",
   "scripts": {
-    "build": "vite build",
+    "build": "vite build --mode client && vite build",
     "dev": "vite",
     "start": "vite preview",
     "test": "tsc && xo"
