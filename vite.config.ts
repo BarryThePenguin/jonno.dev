@@ -1,13 +1,12 @@
 import { defineConfig } from "vite";
+import adapter from "@hono/vite-dev-server/cloudflare";
+import build from "@hono/vite-build/cloudflare-workers";
+import externalLinks from "rehype-external-links";
+import honox from "honox/vite";
+import images from "remark-images";
 import mdx from "@mdx-js/rollup";
 import ssg from "@hono/vite-ssg";
-import build from "@hono/vite-build/cloudflare-workers";
-import devServer from "@hono/vite-dev-server";
 import tailwindcss from "@tailwindcss/vite";
-import images from "remark-images";
-import externalLinks from "rehype-external-links";
-
-const entry = "src/index.tsx";
 
 export default defineConfig({
 	build: {
@@ -16,33 +15,18 @@ export default defineConfig({
 	css: {
 		transformer: "lightningcss",
 	},
-	environments: {
-		client: {
-			build: {
-				rollupOptions: {
-					input: ["./src/client.tsx", "./src/site.css", "./src/print.css"],
-					output: {
-						entryFileNames: "assets/[name].js",
-						assetFileNames: "assets/[name].[ext]",
-					},
-				},
-			},
-		},
-		worker: {
-			build: {
-				assetsInlineLimit: 0,
-			},
-		},
-	},
 	plugins: [
+		tailwindcss(),
+		honox({
+			client: { input: ["./app/site.css", "./app/print.css"] },
+			devServer: { adapter },
+		}),
+		build(),
+		ssg({ entry: "app/server.ts" }),
 		mdx({
 			jsxImportSource: "hono/jsx",
 			remarkPlugins: [images],
 			rehypePlugins: [externalLinks],
 		}),
-		build({ entry }),
-		devServer({ entry }),
-		tailwindcss(),
-		ssg({ entry }),
 	],
 });

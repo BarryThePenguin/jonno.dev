@@ -1,7 +1,16 @@
 import { html } from "hono/html";
 import { jsxRenderer } from "hono/jsx-renderer";
+import { Link, Script } from "honox/server";
 
-export const renderer = jsxRenderer(
+// Const app = new Hono()
+// 	.use(renderer)
+// 	.get("/", async (c) => c.render(<Page />, { title: title("👋🏻") }))
+// 	.get("/resume", async (c) => c.render(<Resume />, { title: title("Resume") }))
+// 	.notFound(async (c) =>
+// 		c.render(<NotFound />, { title: title("Page not found") }),
+// 	);
+
+const renderer = jsxRenderer(
 	async ({
 		children,
 		description = "Jonathan Haines is software engineer who is passionate about building up new developers, improving experiences between people and technology, and web technologies.",
@@ -26,22 +35,20 @@ export const renderer = jsxRenderer(
 					name="viewport"
 					content={`width=${viewport.width}, initial-scale=${viewport.initialScale}`}
 				/>
-				<link
-					href={import.meta.env.PROD ? `/assets/site.css` : `/src/site.css`}
-					rel="stylesheet"
-				/>
-				<link
-					href={import.meta.env.PROD ? `/assets/print.css` : `/src/print.css`}
-					media="print"
-					rel="stylesheet"
-				/>
-				<link
-					rel="preload"
-					href="https://www.googletagmanager.com/gtag/js?id=G-KMG51516QN"
-					as="script"
-				/>
+				<Link href="/app/site.css" rel="stylesheet" />
+				<Link href="/app/print.css" media="print" rel="stylesheet" />
+				{import.meta.env.PROD ? (
+					<link
+						rel="preload"
+						href="https://www.googletagmanager.com/gtag/js?id=G-KMG51516QN"
+						as="script"
+					/>
+				) : null}
+
 				<meta name="theme-color" content={viewport.themeColor} />
-				<title>{title}</title>
+				<title>
+					{title ? `${title} | Jonathan Haines` : "Jonathan Haines"}
+				</title>
 				<meta name="description" content={description} />
 				<meta property="og:title" content={title} />
 				<meta property="og:description" content={description} />
@@ -67,16 +74,12 @@ export const renderer = jsxRenderer(
 				/>
 			</head>
 			<body className="overscroll-none font-sans">
-				<div className="min-h-screen bg-home-light p-4 sm:p-8 dark:bg-home-dark">
+				<div className="bg-home-light dark:bg-home-dark min-h-screen p-4 sm:p-8">
 					{children}
 				</div>
-				<script
-					async
-					src={import.meta.env.PROD ? `/assets/client.js` : `/src/client.tsx`}
-					type="module"
-				/>
+				<Script src="app/client.ts" />
 
-				<script
+				<Script
 					async
 					src="https://www.googletagmanager.com/gtag/js?id=G-KMG51516QN"
 				/>
@@ -94,3 +97,5 @@ export const renderer = jsxRenderer(
 		</html>
 	),
 );
+
+export default renderer;

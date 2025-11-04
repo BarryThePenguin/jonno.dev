@@ -19,12 +19,20 @@
   "scripts": {
     "build": "vite build --mode client && vite build",
     "dev": "vite",
+    "preview": "wrangler dev",
     "start": "vite preview",
     "test": "tsc && xo"
   },
   "keywords": [],
+  "imports": {
+    "#components/*": [
+      "./app/components/*.ts",
+      "./app/components/*.tsx"
+    ]
+  },
   "dependencies": {
     "hono": "^4.9.10",
+    "honox": "^0.1.52",
     "rehype-external-links": "^3.0.0",
     "remark-images": "^4.1.0"
   },
