@@ -18,7 +18,9 @@ export default defineConfig({
 	plugins: [
 		tailwindcss(),
 		honox({
-			client: { input: ["./app/site.css", "./app/print.css"] },
+			client: {
+				input: ["/app/client.ts", "/app/site.css", "/app/print.css"],
+			},
 			devServer: { adapter },
 		}),
 		build(),

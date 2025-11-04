@@ -25,9 +25,9 @@
   },
   "keywords": [],
   "imports": {
-    "#components/*": [
-      "./app/components/*.ts",
-      "./app/components/*.tsx"
+    "#islands/*": [
+      "./app/islands/*.ts",
+      "./app/islands/*.tsx"
     ]
   },
   "dependencies": {

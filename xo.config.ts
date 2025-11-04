@@ -1,14 +1,14 @@
-import {type FlatXoConfig} from 'xo';
-import {version} from 'hono/jsx';
+import { type FlatXoConfig } from "xo";
+import { version } from "hono/jsx";
 
 const xoConfig: FlatXoConfig = [
 	{
-		prettier: 'compat',
+		prettier: "compat",
 		react: true,
 		rules: {
-			'react/react-in-jsx-scope': 'off',
+			"react/react-in-jsx-scope": "off",
 		},
-		settings: {react: {jsxPragma: null, version}},
+		settings: { react: { jsxPragma: null, version } },
 	},
 ];
 

@@ -2,14 +2,6 @@ import { html } from "hono/html";
 import { jsxRenderer } from "hono/jsx-renderer";
 import { Link, Script } from "honox/server";
 
-// Const app = new Hono()
-// 	.use(renderer)
-// 	.get("/", async (c) => c.render(<Page />, { title: title("👋🏻") }))
-// 	.get("/resume", async (c) => c.render(<Resume />, { title: title("Resume") }))
-// 	.notFound(async (c) =>
-// 		c.render(<NotFound />, { title: title("Page not found") }),
-// 	);
-
 const renderer = jsxRenderer(
 	async ({
 		children,
@@ -35,8 +27,8 @@ const renderer = jsxRenderer(
 					name="viewport"
 					content={`width=${viewport.width}, initial-scale=${viewport.initialScale}`}
 				/>
-				<Link href="/app/site.css" rel="stylesheet" />
-				<Link href="/app/print.css" media="print" rel="stylesheet" />
+				<Link href="app/site.css" rel="stylesheet" />
+				<Link href="app/print.css" media="print" rel="stylesheet" />
 				{import.meta.env.PROD ? (
 					<link
 						rel="preload"
@@ -74,10 +66,10 @@ const renderer = jsxRenderer(
 				/>
 			</head>
 			<body className="overscroll-none font-sans">
-				<div className="bg-home-light dark:bg-home-dark min-h-screen p-4 sm:p-8">
+				<div className="min-h-screen bg-home-light p-4 sm:p-8 dark:bg-home-dark">
 					{children}
 				</div>
-				<Script src="app/client.ts" />
+				<Script async src="app/client.ts" />
 
 				<Script
 					async
