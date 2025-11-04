@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import mdx from "@mdx-js/rollup";
 import ssg from "@hono/vite-ssg";
-import { cloudflare } from "@cloudflare/vite-plugin";
 import build from "@hono/vite-build/cloudflare-workers";
 import devServer from "@hono/vite-dev-server";
 import tailwindcss from "@tailwindcss/vite";
@@ -43,7 +42,6 @@ export default defineConfig({
 		}),
 		build({ entry }),
 		devServer({ entry }),
-		cloudflare(),
 		tailwindcss(),
 		ssg({ entry }),
 	],
