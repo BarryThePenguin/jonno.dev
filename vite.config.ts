@@ -31,4 +31,7 @@ export default defineConfig({
 			rehypePlugins: [externalLinks],
 		}),
 	],
+	resolve: {
+		builtins: [/^node:/],
+	}
 });
