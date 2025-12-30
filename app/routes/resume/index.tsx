@@ -1,16 +1,16 @@
 /* eslint-disable react/no-invalid-html-attribute */
 
 import { type JSX } from "hono/jsx";
-import { Article } from "../../islands/article.tsx";
-import { Navigation } from "../../islands/navigation.tsx";
-import { BlueSky, GitHub, LinkedIn, Mastodon } from "../../islands/icons.tsx";
-import { Header } from "../../islands/header.tsx";
-import Print from "../../islands/print-button.tsx";
 import About from "./about.md";
 import Skills from "./skills.md";
 import Work from "./work.md";
 import Education from "./education.md";
 import Interests from "./interests.md";
+import { Article } from "#islands/article";
+import { Navigation } from "#islands/navigation";
+import { BlueSky, GitHub, LinkedIn, Mastodon } from "#islands/icons";
+import { Header } from "#islands/header";
+import Print from "#islands/print-button";
 
 const components = {
 	h2: Header,

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-invalid-html-attribute */
 
-import { Navigation } from "../islands/navigation.tsx";
+import { Navigation } from "#islands/navigation";
 
 export const title = "👋🏻";
 

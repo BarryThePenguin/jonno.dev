@@ -25,10 +25,7 @@
   },
   "keywords": [],
   "imports": {
-    "#islands/*": [
-      "./app/islands/*.ts",
-      "./app/islands/*.tsx"
-    ]
+    "#islands/*": "./app/islands/*.tsx"
   },
   "dependencies": {
     "hono": "^4.11.3",
