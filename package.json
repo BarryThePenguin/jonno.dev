@@ -54,7 +54,7 @@
     "poline": "^0.11.0",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "rampensau": "^2.1.0",
+    "rampensau": "^2.3.0",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
     "vite": "^7.3.0",
