@@ -28,7 +28,7 @@
     "#islands/*": "./app/islands/*.tsx"
   },
   "dependencies": {
-    "hono": "^4.11.3",
+    "hono": "^4.11.7",
     "honox": "^0.1.52",
     "rehype-external-links": "^3.0.0",
     "remark-images": "^4.1.0"
