@@ -6,6 +6,7 @@
 		"jsxImportSource": "hono/jsx",
 		"module": "Preserve",
 		"noEmit": true,
+		"target": "es2024",
 		"types": ["vite/client"]
 	}
 }
