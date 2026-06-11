@@ -1,0 +1,14 @@
+{
+	"$schema": "https://unpkg.com/knip@6/schema.json",
+	"entry": [
+		"app/islands/**/*.tsx",
+		"app/routes/**/*.tsx",
+		"app/client.ts",
+		"app/print.css",
+		"app/server.ts",
+		"app/site.css",
+		"colours.ts",
+		"xo.config.ts"
+	],
+	"tags": ["-lintignore"]
+}
