@@ -32,6 +32,6 @@ export default defineConfig({
 		}),
 	],
 	resolve: {
-		builtins: [/^node:/],
+		builtins: [/^node:/v],
 	}
 });
