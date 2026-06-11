@@ -34,7 +34,7 @@
     "remark-images": "^4.1.0"
   },
   "devDependencies": {
-    "@hono/vite-build": "^1.8.0",
+    "@hono/vite-build": "^1.11.1",
     "@hono/vite-dev-server": "^0.24.0",
     "@hono/vite-ssg": "^0.3.3",
     "@mdx-js/rollup": "^3.1.1",
