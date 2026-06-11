@@ -42,7 +42,7 @@
     "@tailwindcss/vite": "^4.3.0",
     "@tsconfig/strictest": "^2.0.8",
     "@types/gtag.js": "^0.0.20",
-    "@types/mdx": "^2.0.13",
+    "@types/mdx": "^2.0.14",
     "@types/node": "^25.9.3",
     "eslint-config-xo-react": "^0.29.0",
     "eslint-plugin-react": "^7.37.5",
